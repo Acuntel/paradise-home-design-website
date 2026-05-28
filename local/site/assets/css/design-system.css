@@ -483,18 +483,27 @@
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.55;
+  opacity: 0.95;
   z-index: 0;
 }
 .pd-hero-photo::after {
   content: "";
   position: absolute;
   inset: 0;
+  /* Light overlay — let the kitchen photo dominate, just enough darkening
+     at the bottom for white text legibility. */
   background: linear-gradient(
     180deg,
-    rgba(14, 26, 17, 0.35) 0%,
-    rgba(14, 26, 17, 0.75) 100%
+    rgba(14, 26, 17, 0.15) 0%,
+    rgba(14, 26, 17, 0.55) 65%,
+    rgba(14, 26, 17, 0.7) 100%
   );
+}
+.pd-hero-title,
+.pd-hero-description,
+.pd-hero-eyebrow {
+  /* Keeps white text crisp over any photo */
+  text-shadow: 0 2px 24px rgba(14, 26, 17, 0.6);
 }
 .pd-hero-content {
   position: relative;

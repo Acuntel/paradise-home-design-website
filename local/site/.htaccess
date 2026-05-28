@@ -1,0 +1,44 @@
+RewriteEngine on
+
+RewriteBase /
+
+# Core pages
+RewriteRule index.html?$ index.php
+RewriteRule about.html?$ about.php
+RewriteRule gallery.html?$ gallery.php
+RewriteRule contact.html?$ contact.php
+
+# Services (Phase 4)
+RewriteRule kitchens.html?$ kitchens.php
+RewriteRule bathrooms.html?$ bathrooms.php
+RewriteRule counter_tops.html?$ counter_tops.php
+
+# Brand pages
+RewriteRule candlelight.html?$ candlelight.php
+RewriteRule fabuwood.html?$ fabuwood.php
+RewriteRule homecrest.html?$ homecrest.php
+RewriteRule mercier.html?$ mercier.php
+RewriteRule mirage.html?$ mirage.php
+RewriteRule kahrs.html?$ kahrs.php
+RewriteRule casebella.html?$ casebella.php
+RewriteRule florida.html?$ florida.php
+RewriteRule richelieu.html?$ richelieu.php
+RewriteRule schaub.html?$ schaub.php
+
+# Showroom / consultation
+RewriteRule showroom.html?$ showroom.php
+RewriteRule design_consultation.html?$ design_consultation.php
+
+# City landing pages
+RewriteRule highland.html?$ highland.php
+RewriteRule lakeforest.html?$ lakeforest.php
+RewriteRule winnetka.html?$ winnetka.php
+RewriteRule chicago.html?$ chicago.php
+RewriteRule buffalo_grove.html?$ buffalo_grove.php
+RewriteRule vernon_hills.html?$ vernon_hills.php
+
+# Legacy products page
+RewriteRule products.html?$ products.php
+
+# Catch-all for category URLs (e.g. /cabinets/ -> products.php?ctab=cabinets)
+RewriteRule ^(.+)/$ products.php?ctab=$1 [L]

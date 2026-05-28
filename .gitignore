@@ -3,8 +3,10 @@
 .env.local
 .env.*.local
 
-# Downloaded site files (we pull from FTP into local/ for editing)
-local/
+# Pulled samples from server (working copies, not source of truth)
+local/sample/
+
+# Backups of overwritten files
 backups/
 
 # Editor / OS junk

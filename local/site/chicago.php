@@ -10,7 +10,7 @@ $cp_zip_codes = ['North Side · Lincoln Park · Lakeview · Gold Coast · Buckto
 $cp_neighborhoods = ['Lincoln Park', 'Gold Coast', 'Bucktown', 'Wicker Park', 'Lakeview', 'North Side'];
 $cp_projects = [
   ['img' => BASEURL.'indexpage/big/1_1.png', 'title' => 'Contemporary city kitchen', 'location' => 'Chicago, IL'],
-  ['img' => BASEURL.'flash/big/7.png', 'title' => 'High-rise bathroom suite', 'location' => 'Chicago, IL'],
+  ['img' => BASEURL.'lakeforest/big/7_1.png', 'title' => 'High-rise bathroom suite', 'location' => 'Chicago, IL'],
   ['img' => BASEURL.'flash/big/6.png', 'title' => 'Vintage row-home remodel', 'location' => 'Chicago, IL'],
 ];
 include "includes/components/city_page.php";

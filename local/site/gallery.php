@@ -62,16 +62,17 @@ $baseurl = BASEURL;
     <?php
       // Build gallery items. Pulling from existing assets on the server.
       $items = [
-        ['src' => 'indexpage/big/1_1.png',     'title' => 'White kitchen with brass',     'meta' => 'Lake Forest · 2025', 'tags' => 'kitchen modern'],
-        ['src' => 'indexpage/big/1_2.png',     'title' => 'Two-tone island',              'meta' => 'Highland Park · 2024', 'tags' => 'kitchen traditional'],
-        ['src' => 'flash/big/6.png',     'title' => 'Shaker remodel',               'meta' => 'Winnetka · 2024',     'tags' => 'kitchen traditional'],
-        ['src' => 'flash/big/1.png','title' => 'Open-concept kitchen',         'meta' => 'Buffalo Grove · 2024','tags' => 'kitchen modern'],
-        ['src' => 'flash/big/4.png','title' => 'Walk-in shower',               'meta' => 'Highland Park · 2024','tags' => 'bathroom modern'],
-        ['src' => 'flash/big/7.png','title' => 'Marble primary bath',          'meta' => 'Deerfield · 2024',    'tags' => 'bathroom traditional'],
-        ['src' => 'flash/big/5.png','title' => 'Custom shaker kitchen',        'meta' => 'Lake Forest · 2024',  'tags' => 'kitchen traditional'],
-        ['src' => 'flash/big/5.png',     'title' => 'Contemporary suite',           'meta' => 'Chicago · 2025',      'tags' => 'kitchen modern'],
-        ['src' => 'flash/big/2.png',    'title' => 'Quartzite island',             'meta' => 'Winnetka · 2024',     'tags' => 'countertop modern'],
-        ['src' => 'flash/big/7.png',    'title' => 'Calacatta perimeter',          'meta' => 'Highland Park · 2024','tags' => 'countertop modern'],
+        ['src' => 'flash/big/2.png',           'title' => 'Black cabinets, marble, brass',   'meta' => 'Lake Forest · 2025',  'tags' => 'kitchen modern'],
+        ['src' => 'flash/big/1.png',           'title' => 'Blue island, subway tile',        'meta' => 'Highland Park · 2024','tags' => 'kitchen traditional'],
+        ['src' => 'flash/big/5.png',           'title' => 'Custom white shaker kitchen',     'meta' => 'Lake Forest · 2024',  'tags' => 'kitchen modern'],
+        ['src' => 'flash/big/7.png',           'title' => 'Traditional cherry kitchen',      'meta' => 'Winnetka · 2024',     'tags' => 'kitchen traditional'],
+        ['src' => 'flash/big/6.png',           'title' => 'Coastal white + tiffany island',  'meta' => 'Florida · 2024',      'tags' => 'kitchen modern'],
+        ['src' => 'flash/big/3.png',           'title' => 'Gothic-style built-in cabinetry', 'meta' => 'Lake Forest · 2024',  'tags' => 'kitchen traditional'],
+        ['src' => 'flash/big/4.png',           'title' => 'Spa bath with floating vanity',   'meta' => 'Highland Park · 2024','tags' => 'bathroom modern'],
+        ['src' => 'lakeforest/big/3_1.png',    'title' => 'Double-vanity primary bath',      'meta' => 'Deerfield · 2024',    'tags' => 'bathroom traditional'],
+        ['src' => 'lakeforest/big/7_1.png',    'title' => 'Powder room with vessel sinks',   'meta' => 'Winnetka · 2024',     'tags' => 'bathroom modern'],
+        ['src' => 'indexpage/big/1_1.png',     'title' => 'White kitchen, brass pulls',      'meta' => 'Lake Forest · 2025',  'tags' => 'kitchen modern'],
+        ['src' => 'indexpage/big/1_2.png',     'title' => 'Two-tone blue island kitchen',    'meta' => 'Highland Park · 2024','tags' => 'kitchen traditional'],
       ];
       foreach ($items as $i => $it):
     ?>

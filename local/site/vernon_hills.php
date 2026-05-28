@@ -9,7 +9,7 @@ $cp_hero_image = BASEURL . 'flash/big/7.png';
 $cp_zip_codes = ['60061'];
 $cp_neighborhoods = ['Greggs Landing', 'New Century Town', 'Centennial Crossings'];
 $cp_projects = [
-  ['img' => BASEURL.'flash/big/7.png', 'title' => 'Marble primary bath', 'location' => 'Vernon Hills, IL'],
+  ['img' => BASEURL.'lakeforest/big/7_1.png', 'title' => 'Spa primary bath', 'location' => 'Vernon Hills, IL'],
   ['img' => BASEURL.'flash/big/6.png', 'title' => 'Family kitchen refresh', 'location' => 'Vernon Hills, IL'],
   ['img' => BASEURL.'flash/big/1.png', 'title' => 'Hardwood + tile remodel', 'location' => 'Vernon Hills, IL'],
 ];

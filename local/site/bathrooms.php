@@ -24,9 +24,9 @@ $sp_materials = [
   ['name' => 'Lighting',           'desc' => 'Wet-rated, dimmable, color-correct for makeup.'],
 ];
 $sp_projects = [
-  ['img' => BASEURL.'flash/big/7.png', 'title' => 'Marble primary bath',     'location' => 'Deerfield, IL'],
-  ['img' => BASEURL.'flash/big/4.png', 'title' => 'Walk-in shower remodel',  'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'flash/big/1.png', 'title' => 'Powder room refresh',     'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'lakeforest/big/3_1.png', 'title' => 'Double-vanity primary bath', 'location' => 'Deerfield, IL'],
+  ['img' => BASEURL.'flash/big/4.png',        'title' => 'Spa bath with floating vanity', 'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'lakeforest/big/7_1.png', 'title' => 'Powder room with vessel sinks', 'location' => 'Winnetka, IL'],
 ];
 $sp_current_page = 'bathrooms';
 include "includes/components/service_page.php";

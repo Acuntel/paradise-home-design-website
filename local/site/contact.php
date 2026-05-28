@@ -27,7 +27,7 @@ $address = $contact['Address'] ?? '225 E Deerpath Rd, Unit #80, Lake Forest, IL 
 
 <?php
   $hero_variant = 'compact';
-  $hero_image = $baseurl . 'assets/img/hero/hero-3.jpg';
+  $hero_image = $baseurl . 'flash/big/4.png';
   $hero_eyebrow = 'Get in touch';
   $hero_title = "Let's talk about your project.";
   $hero_description = 'Free consultation. We respond within one business day.';

@@ -7,7 +7,7 @@ $bp_meta_desc  = 'Mirage premium hardwood flooring — North America\'s #1-rated
 $bp_canonical  = 'mirage';
 $bp_brand_name = 'Mirage';
 $bp_eyebrow    = 'Flooring partner';
-$bp_hero_image = BASEURL . 'assets/img/hero/hero-3.jpg';
+$bp_hero_image = BASEURL . 'flash/big/4.png';
 $bp_story = [
   'Mirage has been the #1-rated hardwood floor in North America for over a decade — independent surveys, not marketing. Made in Saint-Georges, Quebec since 1981.',
   'Their Nanolinx finish is the most durable in the industry: aluminum oxide combined with a proprietary nano-particle layer. We use Mirage when the floor needs to hold up to dogs, kids, and chairs without showing it.',
@@ -24,8 +24,8 @@ $bp_products = [
 ];
 $bp_projects = [
   ['img' => BASEURL.'indexpage/big/1_2.png',      'title' => 'Wire-brushed white oak',     'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'assets/img/hero/hero-3.jpg', 'title' => 'Hand-scraped wide-plank',     'location' => 'Buffalo Grove, IL'],
-  ['img' => BASEURL.'indexpage/big/1_3.png',      'title' => 'Classic smooth oak',          'location' => 'Glencoe, IL'],
+  ['img' => BASEURL.'flash/big/4.png', 'title' => 'Hand-scraped wide-plank',     'location' => 'Buffalo Grove, IL'],
+  ['img' => BASEURL.'flash/big/6.png',      'title' => 'Classic smooth oak',          'location' => 'Glencoe, IL'],
 ];
 $bp_current_page = 'countertops';
 include "includes/components/brand_page.php";

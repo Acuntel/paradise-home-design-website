@@ -39,7 +39,7 @@ $baseurl = BASEURL;
 
 <?php
   $hero_variant = 'compact';
-  $hero_image = $baseurl . 'assets/img/banner.png';
+  $hero_image = $baseurl . 'flash/big/5.png';
   $hero_eyebrow = 'Project gallery';
   $hero_title = 'Every kitchen we\'ve finished, one place.';
   $hero_description = '38 years of remodels on Chicago\'s North Shore. Filter by room or style.';
@@ -64,14 +64,14 @@ $baseurl = BASEURL;
       $items = [
         ['src' => 'indexpage/big/1_1.png',     'title' => 'White kitchen with brass',     'meta' => 'Lake Forest · 2025', 'tags' => 'kitchen modern'],
         ['src' => 'indexpage/big/1_2.png',     'title' => 'Two-tone island',              'meta' => 'Highland Park · 2024', 'tags' => 'kitchen traditional'],
-        ['src' => 'indexpage/big/1_3.png',     'title' => 'Shaker remodel',               'meta' => 'Winnetka · 2024',     'tags' => 'kitchen traditional'],
-        ['src' => 'assets/img/hero/hero-2.jpg','title' => 'Open-concept kitchen',         'meta' => 'Buffalo Grove · 2024','tags' => 'kitchen modern'],
-        ['src' => 'assets/img/hero/hero-3.jpg','title' => 'Walk-in shower',               'meta' => 'Highland Park · 2024','tags' => 'bathroom modern'],
-        ['src' => 'assets/img/hero/hero-4.jpg','title' => 'Marble primary bath',          'meta' => 'Deerfield · 2024',    'tags' => 'bathroom traditional'],
-        ['src' => 'assets/img/hero/hero-5.jpg','title' => 'Custom shaker kitchen',        'meta' => 'Lake Forest · 2024',  'tags' => 'kitchen traditional'],
-        ['src' => 'assets/img/banner.png',     'title' => 'Contemporary suite',           'meta' => 'Chicago · 2025',      'tags' => 'kitchen modern'],
-        ['src' => 'assets/img/banner2.png',    'title' => 'Quartzite island',             'meta' => 'Winnetka · 2024',     'tags' => 'countertop modern'],
-        ['src' => 'assets/img/banner3.png',    'title' => 'Calacatta perimeter',          'meta' => 'Highland Park · 2024','tags' => 'countertop modern'],
+        ['src' => 'flash/big/6.png',     'title' => 'Shaker remodel',               'meta' => 'Winnetka · 2024',     'tags' => 'kitchen traditional'],
+        ['src' => 'flash/big/1.png','title' => 'Open-concept kitchen',         'meta' => 'Buffalo Grove · 2024','tags' => 'kitchen modern'],
+        ['src' => 'flash/big/4.png','title' => 'Walk-in shower',               'meta' => 'Highland Park · 2024','tags' => 'bathroom modern'],
+        ['src' => 'flash/big/7.png','title' => 'Marble primary bath',          'meta' => 'Deerfield · 2024',    'tags' => 'bathroom traditional'],
+        ['src' => 'flash/big/5.png','title' => 'Custom shaker kitchen',        'meta' => 'Lake Forest · 2024',  'tags' => 'kitchen traditional'],
+        ['src' => 'flash/big/5.png',     'title' => 'Contemporary suite',           'meta' => 'Chicago · 2025',      'tags' => 'kitchen modern'],
+        ['src' => 'flash/big/2.png',    'title' => 'Quartzite island',             'meta' => 'Winnetka · 2024',     'tags' => 'countertop modern'],
+        ['src' => 'flash/big/7.png',    'title' => 'Calacatta perimeter',          'meta' => 'Highland Park · 2024','tags' => 'countertop modern'],
       ];
       foreach ($items as $i => $it):
     ?>

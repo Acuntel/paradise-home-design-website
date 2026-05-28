@@ -15,7 +15,7 @@ $phone_raw = $contact['Phone'] ?? '(847) 681-9000';
 <meta name="description" content="Paradise Home Design has been designing and remodeling kitchens, bathrooms, and homes on Chicago's North Shore since 1986. Lake Forest based, owner-led.">
 <link rel="canonical" href="https://www.paradisehomedesigninc.com/about.html" />
 <meta property="og:title" content="About Paradise Home Design" />
-<meta property="og:image" content="https://www.paradisehomedesigninc.com<?php echo $baseurl; ?>assets/img/hero/hero-5.jpg" />
+<meta property="og:image" content="https://www.paradisehomedesigninc.com<?php echo $baseurl; ?>flash/big/5.png" />
 <meta name="robots" content="index, follow"/>
 <link rel="shortcut icon" href="<?php echo $baseurl; ?>assets/img/favicon.png">
 <?php include_once("includes/headtags.php"); ?>
@@ -26,7 +26,7 @@ $phone_raw = $contact['Phone'] ?? '(847) 681-9000';
 
 <?php
   $hero_variant = 'compact';
-  $hero_image = $baseurl . 'assets/img/hero/hero-5.jpg';
+  $hero_image = $baseurl . 'flash/big/5.png';
   $hero_eyebrow = 'About Paradise';
   $hero_title = '38 years designing the North Shore\'s most thoughtful kitchens.';
   $hero_description = '';

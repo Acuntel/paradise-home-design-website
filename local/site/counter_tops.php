@@ -5,7 +5,7 @@ include_once("includes/config.php");
 $sp_title        = 'Countertops · Quartz, Marble, Quartzite · Lake Forest, IL · Paradise Home Design';
 $sp_meta_desc    = 'Custom countertop fabrication and install on Chicago\'s North Shore. Quartz, marble, quartzite, soapstone. Lake Forest, IL. (847) 681-9000.';
 $sp_canonical    = 'counter_tops';
-$sp_hero_image   = BASEURL . 'assets/img/hero/hero-4.jpg';
+$sp_hero_image   = BASEURL . 'flash/big/7.png';
 $sp_hero_eyebrow = 'Countertops';
 $sp_hero_title   = 'The surface that defines the room.';
 $sp_hero_desc    = 'Quartz, quartzite, marble, soapstone, butcher block. Sourced direct from Mercier, Mirage, and Casabella.';
@@ -26,7 +26,7 @@ $sp_materials = [
 $sp_projects = [
   ['img' => BASEURL.'indexpage/big/1_1.png', 'title' => 'Calacatta quartz island',     'location' => 'Lake Forest, IL'],
   ['img' => BASEURL.'indexpage/big/1_2.png', 'title' => 'Soapstone perimeter + walnut island', 'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'indexpage/big/1_3.png', 'title' => 'Quartzite waterfall edge',    'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'flash/big/6.png', 'title' => 'Quartzite waterfall edge',    'location' => 'Winnetka, IL'],
 ];
 $sp_current_page = 'countertops';
 include "includes/components/service_page.php";

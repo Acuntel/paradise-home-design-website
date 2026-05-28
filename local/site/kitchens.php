@@ -5,7 +5,7 @@ include_once("includes/config.php");
 $sp_title        = 'Kitchen Remodeling · Lake Forest, IL · Paradise Home Design';
 $sp_meta_desc    = 'Custom kitchen design and remodeling on Chicago\'s North Shore. Cabinets, countertops, appliances, lighting. Lake Forest, IL. (847) 681-9000.';
 $sp_canonical    = 'kitchens';
-$sp_hero_image   = BASEURL . 'assets/img/hero/hero-5.jpg';
+$sp_hero_image   = BASEURL . 'flash/big/5.png';
 $sp_hero_eyebrow = 'Kitchen remodeling';
 $sp_hero_title   = 'Kitchens built around how you actually cook.';
 $sp_hero_desc    = 'From the first sketch to the final reveal. Custom cabinetry, premium appliances, lighting that works.';
@@ -26,7 +26,7 @@ $sp_materials = [
 $sp_projects = [
   ['img' => BASEURL.'indexpage/big/1_1.png', 'title' => 'Modern white kitchen with brass accents', 'location' => 'Lake Forest, IL'],
   ['img' => BASEURL.'indexpage/big/1_2.png', 'title' => 'Two-tone island kitchen',                  'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'indexpage/big/1_3.png', 'title' => 'Classic shaker remodel',                   'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'flash/big/6.png', 'title' => 'Classic shaker remodel',                   'location' => 'Winnetka, IL'],
 ];
 $sp_current_page = 'kitchens';
 include "includes/components/service_page.php";

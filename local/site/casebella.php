@@ -7,7 +7,7 @@ $bp_meta_desc  = 'Casabella hardwood flooring — Italian-influenced wide-plank 
 $bp_canonical  = 'casebella';
 $bp_brand_name = 'Casabella';
 $bp_eyebrow    = 'Flooring partner';
-$bp_hero_image = BASEURL . 'assets/img/hero/hero-5.jpg';
+$bp_hero_image = BASEURL . 'flash/big/5.png';
 $bp_story = [
   'Casabella brings European-style wide-plank wood floors to the North American market. Italian design language, oak sourced from European forests, finished in North America for our climate.',
   'We use Casabella when a client wants the look of a luxury European villa floor but needs domestic lead times and warranty support.',
@@ -23,8 +23,8 @@ $bp_products = [
   ['name' => '25-year warranty', 'desc' => 'Residential coverage.'],
 ];
 $bp_projects = [
-  ['img' => BASEURL.'indexpage/big/1_3.png',      'title' => 'Wire-brushed European oak', 'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'assets/img/hero/hero-5.jpg', 'title' => 'Smooth long-plank install',  'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'flash/big/6.png',      'title' => 'Wire-brushed European oak', 'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'flash/big/5.png', 'title' => 'Smooth long-plank install',  'location' => 'Highland Park, IL'],
   ['img' => BASEURL.'indexpage/big/1_2.png',      'title' => 'Hand-scraped statement floor','location' => 'Winnetka, IL'],
 ];
 $bp_current_page = 'countertops';

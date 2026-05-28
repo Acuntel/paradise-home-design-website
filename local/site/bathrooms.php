@@ -5,7 +5,7 @@ include_once("includes/config.php");
 $sp_title        = 'Bathroom Remodeling · Lake Forest, IL · Paradise Home Design';
 $sp_meta_desc    = 'Bathroom design and renovation on Chicago\'s North Shore — primary suites, powder rooms, full tile and stone. Lake Forest, IL. (847) 681-9000.';
 $sp_canonical    = 'bathrooms';
-$sp_hero_image   = BASEURL . 'assets/img/hero/hero-3.jpg';
+$sp_hero_image   = BASEURL . 'flash/big/4.png';
 $sp_hero_eyebrow = 'Bathroom remodeling';
 $sp_hero_title   = 'Bathrooms that feel like the rest of the house.';
 $sp_hero_desc    = 'From spa-style primary suites to compact powder rooms. Tile, stone, fixtures, lighting — handled.';
@@ -24,9 +24,9 @@ $sp_materials = [
   ['name' => 'Lighting',           'desc' => 'Wet-rated, dimmable, color-correct for makeup.'],
 ];
 $sp_projects = [
-  ['img' => BASEURL.'assets/img/hero/hero-4.jpg', 'title' => 'Marble primary bath',     'location' => 'Deerfield, IL'],
-  ['img' => BASEURL.'assets/img/hero/hero-3.jpg', 'title' => 'Walk-in shower remodel',  'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'assets/img/hero/hero-2.jpg', 'title' => 'Powder room refresh',     'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'flash/big/7.png', 'title' => 'Marble primary bath',     'location' => 'Deerfield, IL'],
+  ['img' => BASEURL.'flash/big/4.png', 'title' => 'Walk-in shower remodel',  'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'flash/big/1.png', 'title' => 'Powder room refresh',     'location' => 'Winnetka, IL'],
 ];
 $sp_current_page = 'bathrooms';
 include "includes/components/service_page.php";

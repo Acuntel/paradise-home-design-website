@@ -7,7 +7,7 @@ $bp_meta_desc  = 'Homecrest semi-custom cabinetry — quality American-made boxe
 $bp_canonical  = 'homecrest';
 $bp_brand_name = 'Homecrest';
 $bp_eyebrow    = 'Cabinetry partner';
-$bp_hero_image = BASEURL . 'assets/img/hero/hero-3.jpg';
+$bp_hero_image = BASEURL . 'flash/big/4.png';
 $bp_story = [
   'Homecrest has been making cabinets in Goshen, Indiana since 1962. They invented the laminated cabinet box and remain one of the most consistent, well-built semi-custom lines available.',
   'We use Homecrest for clients who want American craftsmanship without the wait of true custom. Lead times are reliable, finishes are excellent, and the warranty is among the strongest in the industry.',
@@ -24,8 +24,8 @@ $bp_products = [
 ];
 $bp_projects = [
   ['img' => BASEURL.'indexpage/big/1_1.png', 'title' => 'Bayport painted kitchen', 'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'indexpage/big/1_3.png', 'title' => 'Tahoma slab remodel',     'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'assets/img/hero/hero-4.jpg', 'title' => 'Coronado traditional', 'location' => 'Glencoe, IL'],
+  ['img' => BASEURL.'flash/big/6.png', 'title' => 'Tahoma slab remodel',     'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'flash/big/7.png', 'title' => 'Coronado traditional', 'location' => 'Glencoe, IL'],
 ];
 $bp_current_page = 'kitchens';
 include "includes/components/brand_page.php";

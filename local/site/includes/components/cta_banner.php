@@ -1,6 +1,6 @@
 <?php
 /**
- * Full-width CTA banner — forest bg, brass headline, single CTA.
+ * Full-width CTA banner, forest bg, brass headline, single CTA.
  * Args: $cta_heading, $cta_subhead, $cta_button_text, $cta_button_href
  */
 $baseurl = defined('BASEURL') ? BASEURL : '/';

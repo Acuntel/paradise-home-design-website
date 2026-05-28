@@ -3,12 +3,12 @@ ob_start(); session_start();
 include_once("includes/config.php");
 
 $sp_title        = 'Bathroom Remodeling · Lake Forest, IL · Paradise Home Design';
-$sp_meta_desc    = 'Bathroom design and renovation on Chicago\'s North Shore — primary suites, powder rooms, full tile and stone. Lake Forest, IL. (847) 681-9000.';
+$sp_meta_desc    = 'Bathroom design and renovation on Chicago\'s North Shore, primary suites, powder rooms, full tile and stone. Lake Forest, IL. (847) 681-9000.';
 $sp_canonical    = 'bathrooms';
 $sp_hero_image   = BASEURL . 'flash/big/4.png';
 $sp_hero_eyebrow = 'Bathroom remodeling';
 $sp_hero_title   = 'Bathrooms that feel like the rest of the house.';
-$sp_hero_desc    = 'From spa-style primary suites to compact powder rooms. Tile, stone, fixtures, lighting — handled.';
+$sp_hero_desc    = 'From spa-style primary suites to compact powder rooms. Tile, stone, fixtures, lighting, handled.';
 $sp_intro_heading = 'A bathroom is the smallest hardest room to remodel.';
 $sp_intro_text   = 'Plumbing, waterproofing, ventilation, lighting, tile geometry. Get one of them wrong and you live with it for ten years. We get them right.';
 $sp_materials_eyebrow = 'Surfaces, fixtures, finishes';

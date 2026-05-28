@@ -19,7 +19,7 @@ $baseurl = BASEURL;
 <link rel="shortcut icon" href="<?php echo $baseurl; ?>assets/img/favicon.png">
 <?php include_once("includes/headtags.php"); ?>
 <style>
-  /* Masonry grid using CSS columns — no JS needed */
+  /* Masonry grid using CSS columns, no JS needed */
   .pd-masonry { column-count: 1; column-gap: 1.5rem; }
   @media (min-width: 640px) { .pd-masonry { column-count: 2; } }
   @media (min-width: 1024px) { .pd-masonry { column-count: 3; } }
@@ -85,7 +85,7 @@ $baseurl = BASEURL;
     <?php endforeach; ?>
 
     <div class="pd-masonry" id="pd-masonry">
-      <?php // Re-render inside masonry container (the above were duplicated for graceful fallback — clean approach below)
+      <?php // Re-render inside masonry container (the above were duplicated for graceful fallback, clean approach below)
       ?>
     </div>
 

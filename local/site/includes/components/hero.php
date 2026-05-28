@@ -1,6 +1,6 @@
 <?php
 /**
- * Paradise Hero — three variants.
+ * Paradise Hero, three variants.
  *
  * Args:
  *   $hero_variant     'fullscreen' | 'split' | 'compact'   (default 'fullscreen')

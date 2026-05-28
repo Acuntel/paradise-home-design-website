@@ -1,6 +1,6 @@
 <?php
 /**
- * Trust strip — single horizontal row of credentials, brass divider dots.
+ * Trust strip, single horizontal row of credentials, brass divider dots.
  * Default items pre-set; pass $trust_items to override.
  */
 $trust_items = $trust_items ?? [

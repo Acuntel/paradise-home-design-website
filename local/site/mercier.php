@@ -3,14 +3,14 @@ ob_start(); session_start();
 include_once("includes/config.php");
 
 $bp_title      = 'Mercier Wood Flooring · Paradise Home Design';
-$bp_meta_desc  = 'Mercier hardwood flooring — Canadian-made engineered and solid wood floors through Paradise Home Design in Lake Forest, IL.';
+$bp_meta_desc  = 'Mercier hardwood flooring, Canadian-made engineered and solid wood floors through Paradise Home Design in Lake Forest, IL.';
 $bp_canonical  = 'mercier';
 $bp_brand_name = 'Mercier Wood';
 $bp_eyebrow    = 'Flooring partner';
 $bp_hero_image = BASEURL . 'flash/big/1.png';
 $bp_story = [
-  'Mercier has been making hardwood floors in Quebec since 1980. They run one of the most advanced wood-finishing operations in North America — UV-cured Generations finish is harder than what comes off most factory floors.',
-  'We specify Mercier when we want a real-wood floor that handles a kitchen — moisture from cooking, scratches from chairs, foot traffic from a real family.',
+  'Mercier has been making hardwood floors in Quebec since 1980. They run one of the most advanced wood-finishing operations in North America, UV-cured Generations finish is harder than what comes off most factory floors.',
+  'We specify Mercier when we want a real-wood floor that handles a kitchen, moisture from cooking, scratches from chairs, foot traffic from a real family.',
 ];
 $bp_products = [
   ['name' => 'Generations finish','desc' => 'UV-cured aluminum-oxide. 35-year residential warranty.'],

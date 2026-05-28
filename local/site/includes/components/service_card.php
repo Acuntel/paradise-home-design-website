@@ -1,6 +1,6 @@
 <?php
 /**
- * Service card — image + heading + 1-line desc + ghost link.
+ * Service card, image + heading + 1-line desc + ghost link.
  * Args: $svc_image, $svc_heading, $svc_text, $svc_href, $svc_link_text
  */
 $svc_link_text = $svc_link_text ?? 'See our work';

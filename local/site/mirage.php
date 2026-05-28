@@ -3,13 +3,13 @@ ob_start(); session_start();
 include_once("includes/config.php");
 
 $bp_title      = 'Mirage Hardwood Flooring · Paradise Home Design';
-$bp_meta_desc  = 'Mirage premium hardwood flooring — North America\'s #1-rated wood floor, through Paradise Home Design in Lake Forest, IL.';
+$bp_meta_desc  = 'Mirage premium hardwood flooring, North America\'s #1-rated wood floor, through Paradise Home Design in Lake Forest, IL.';
 $bp_canonical  = 'mirage';
 $bp_brand_name = 'Mirage';
 $bp_eyebrow    = 'Flooring partner';
 $bp_hero_image = BASEURL . 'flash/big/4.png';
 $bp_story = [
-  'Mirage has been the #1-rated hardwood floor in North America for over a decade — independent surveys, not marketing. Made in Saint-Georges, Quebec since 1981.',
+  'Mirage has been the #1-rated hardwood floor in North America for over a decade, independent surveys, not marketing. Made in Saint-Georges, Quebec since 1981.',
   'Their Nanolinx finish is the most durable in the industry: aluminum oxide combined with a proprietary nano-particle layer. We use Mirage when the floor needs to hold up to dogs, kids, and chairs without showing it.',
 ];
 $bp_products = [

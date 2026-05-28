@@ -13,10 +13,17 @@ RewriteRule kitchens.html?$ kitchens.php
 RewriteRule bathrooms.html?$ bathrooms.php
 RewriteRule counter_tops.html?$ counter_tops.php
 
+# Brand index
+RewriteRule brands.html?$ brands.php
+
 # Brand pages
 RewriteRule candlelight.html?$ candlelight.php
 RewriteRule fabuwood.html?$ fabuwood.php
 RewriteRule homecrest.html?$ homecrest.php
+RewriteRule holiday_kitchen.html?$ holiday_kitchen.php
+RewriteRule medallion.html?$ medallion.php
+RewriteRule rdhenry.html?$ rdhenry.php
+RewriteRule woodland.html?$ woodland.php
 RewriteRule mercier.html?$ mercier.php
 RewriteRule mirage.html?$ mirage.php
 RewriteRule kahrs.html?$ kahrs.php
@@ -25,9 +32,11 @@ RewriteRule florida.html?$ florida.php
 RewriteRule richelieu.html?$ richelieu.php
 RewriteRule schaub.html?$ schaub.php
 
-# Showroom / consultation
+# Showroom / consultation / payment / thanks
 RewriteRule showroom.html?$ showroom.php
 RewriteRule design_consultation.html?$ design_consultation.php
+RewriteRule pay_now.html?$ pay_now.php
+RewriteRule thankyou.html?$ thankyou.php
 
 # City landing pages
 RewriteRule highland.html?$ highland.php

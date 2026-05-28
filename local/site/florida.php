@@ -2,7 +2,7 @@
 ob_start(); session_start();
 include_once("includes/config.php");
 $cp_title = 'Florida Projects · Paradise Home Design';
-$cp_meta_desc = 'Select Paradise Home Design kitchen and bath projects in Florida. Lake Forest, IL based — we travel for trusted clients.';
+$cp_meta_desc = 'Select Paradise Home Design kitchen and bath projects in Florida. Lake Forest, IL based, we travel for trusted clients.';
 $cp_canonical = 'florida';
 $cp_city_name = 'Florida';
 $cp_hero_image = BASEURL . 'flash/big/5.png';

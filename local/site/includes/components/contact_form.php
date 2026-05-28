@@ -1,6 +1,6 @@
 <?php
 /**
- * Contact form — posts to contactmail.php (preserve legacy handler).
+ * Contact form, posts to contactmail.php (preserve legacy handler).
  */
 $baseurl = defined('BASEURL') ? BASEURL : '/';
 ?>

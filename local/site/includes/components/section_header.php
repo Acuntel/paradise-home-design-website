@@ -1,6 +1,6 @@
 <?php
 /**
- * Section header — eyebrow + heading + optional description.
+ * Section header, eyebrow + heading + optional description.
  *
  * Args (pre-set $variables before include):
  *   $sh_eyebrow      string (uppercase label)

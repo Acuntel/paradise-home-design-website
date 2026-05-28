@@ -3,7 +3,7 @@ ob_start(); session_start();
 include_once("includes/config.php");
 
 $bp_title      = 'Fabuwood Cabinetry · Paradise Home Design';
-$bp_meta_desc  = 'Fabuwood cabinetry — quality semi-custom cabinets at attainable prices, through Paradise Home Design in Lake Forest, IL.';
+$bp_meta_desc  = 'Fabuwood cabinetry, quality semi-custom cabinets at attainable prices, through Paradise Home Design in Lake Forest, IL.';
 $bp_canonical  = 'fabuwood';
 $bp_brand_name = 'Fabuwood';
 $bp_eyebrow    = 'Cabinetry partner';

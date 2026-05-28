@@ -3,7 +3,7 @@ ob_start(); session_start();
 include_once("includes/config.php");
 
 $bp_title      = 'Casabella Flooring · Paradise Home Design';
-$bp_meta_desc  = 'Casabella hardwood flooring — Italian-influenced wide-plank engineered floors through Paradise Home Design in Lake Forest, IL.';
+$bp_meta_desc  = 'Casabella hardwood flooring, Italian-influenced wide-plank engineered floors through Paradise Home Design in Lake Forest, IL.';
 $bp_canonical  = 'casebella';
 $bp_brand_name = 'Casabella';
 $bp_eyebrow    = 'Flooring partner';

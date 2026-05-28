@@ -3,7 +3,7 @@ ob_start(); session_start();
 include_once("includes/config.php");
 
 $bp_title      = 'Homecrest Cabinetry · Paradise Home Design';
-$bp_meta_desc  = 'Homecrest semi-custom cabinetry — quality American-made boxes through Paradise Home Design in Lake Forest, IL.';
+$bp_meta_desc  = 'Homecrest semi-custom cabinetry, quality American-made boxes through Paradise Home Design in Lake Forest, IL.';
 $bp_canonical  = 'homecrest';
 $bp_brand_name = 'Homecrest';
 $bp_eyebrow    = 'Cabinetry partner';

@@ -42,7 +42,7 @@ $phone_raw = $contact['Phone'] ?? '(847) 681-9000';
       <span class="eyebrow">Origin</span>
       <h2>A family business that grew up with the towns it serves.</h2>
       <p class="lead">Paradise Home Design started in 1986 with a single sketch table and a shop full of cabinet samples in Lake Forest. We've never moved. Same address, same approach.</p>
-      <p>For 38 years we've worked one project at a time, in one slice of one metropolitan area. We know the housing stock on the North Shore better than anyone — the 1920s Tudors in East Lake Forest, the mid-century ranches in Highland Park, the lakefront moderns in Winnetka. Every floor plan, every load path, every winter quirk.</p>
+      <p>For 38 years we've worked one project at a time, in one slice of one metropolitan area. We know the housing stock on the North Shore better than anyone, the 1920s Tudors in East Lake Forest, the mid-century ranches in Highland Park, the lakefront moderns in Winnetka. Every floor plan, every load path, every winter quirk.</p>
     </div>
 
     <div class="mt-5" data-reveal>

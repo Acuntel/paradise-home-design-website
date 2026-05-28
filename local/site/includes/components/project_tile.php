@@ -1,6 +1,6 @@
 <?php
 /**
- * Project tile — large kitchen photo + overlay caption.
+ * Project tile, large kitchen photo + overlay caption.
  * Args: $proj_image, $proj_title, $proj_location, $proj_href (optional)
  */
 $proj_href = $proj_href ?? '#';

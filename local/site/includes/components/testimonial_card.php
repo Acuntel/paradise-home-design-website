@@ -1,6 +1,6 @@
 <?php
 /**
- * Testimonial card — 5-star, quote, name + project.
+ * Testimonial card, 5-star, quote, name + project.
  * Args: $t_quote, $t_name, $t_project
  */
 ?>

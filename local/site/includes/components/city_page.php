@@ -37,7 +37,7 @@ $phone_href = 'tel:+1' . preg_replace('/\D/', '', $phone_raw);
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Paradise Home Design Inc — <?php echo $cp_city_name; ?>",
+  "name": "Paradise Home Design Inc, <?php echo $cp_city_name; ?>",
   "url": "https://www.paradisehomedesigninc.com/<?php echo $cp_canonical; ?>.html",
   "telephone": "+1<?php echo preg_replace('/\D/', '', $phone_raw); ?>",
   "areaServed": "<?php echo $cp_city_name; ?>, IL",

@@ -13,7 +13,7 @@ $current_page = 'home';
 
 <title>Kitchen Remodeling &amp; Bathroom Design · Lake Forest, IL · Paradise Home Design</title>
 <meta name="keywords" content="Kitchen Remodeling Lake Forest IL, Bathroom Renovation Lake Forest IL, North Shore kitchen designer">
-<meta name="description" content="Paradise Home Design Inc. — design-build kitchens, bathrooms, and full-home remodels on Chicago's North Shore since 1986. Lake Forest, IL · (847) 681-9000.">
+<meta name="description" content="Paradise Home Design Inc., design-build kitchens, bathrooms, and full-home remodels on Chicago's North Shore since 1986. Lake Forest, IL · (847) 681-9000.">
 
 <link rel="canonical" href="https://www.paradisehomedesigninc.com/" />
 <meta name="robots" content="index, follow"/>
@@ -196,7 +196,7 @@ $current_page = 'home';
 <section>
   <div class="container">
     <div class="pd-split mb-5" data-reveal>
-      <div class="pd-split-media"><img src="<?php echo BASEURL; ?>flash/big/1.png" alt="Owner-led design — blue island kitchen, Lake Forest" loading="lazy"></div>
+      <div class="pd-split-media"><img src="<?php echo BASEURL; ?>flash/big/1.png" alt="Owner-led design, blue island kitchen, Lake Forest" loading="lazy"></div>
       <div>
         <span class="eyebrow">Owner-led</span>
         <h2>The owner is on every project. Including yours.</h2>
@@ -204,7 +204,7 @@ $current_page = 'home';
       </div>
     </div>
     <div class="pd-split reverse mb-5" data-reveal>
-      <div class="pd-split-media"><img src="<?php echo BASEURL; ?>flash/big/7.png" alt="Premium materials — traditional cherry kitchen with granite island" loading="lazy"></div>
+      <div class="pd-split-media"><img src="<?php echo BASEURL; ?>flash/big/7.png" alt="Premium materials, traditional cherry kitchen with granite island" loading="lazy"></div>
       <div>
         <span class="eyebrow">Premium materials</span>
         <h2>Direct relationships with brands that don't sell to box stores.</h2>
@@ -212,7 +212,7 @@ $current_page = 'home';
       </div>
     </div>
     <div class="pd-split" data-reveal>
-      <div class="pd-split-media"><img src="<?php echo BASEURL; ?>flash/big/5.png" alt="North Shore expertise — white shaker kitchen with island" loading="lazy"></div>
+      <div class="pd-split-media"><img src="<?php echo BASEURL; ?>flash/big/5.png" alt="North Shore expertise, white shaker kitchen with island" loading="lazy"></div>
       <div>
         <span class="eyebrow">North Shore experts</span>
         <h2>38 years building for one of the most demanding markets in the country.</h2>

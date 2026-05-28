@@ -3,13 +3,13 @@ ob_start(); session_start();
 include_once("includes/config.php");
 
 $bp_title      = 'Candlelight Cabinetry · Paradise Home Design';
-$bp_meta_desc  = 'Candlelight Cabinetry — premium American-made cabinets, available through Paradise Home Design in Lake Forest, IL.';
+$bp_meta_desc  = 'Candlelight Cabinetry, premium American-made cabinets, available through Paradise Home Design in Lake Forest, IL.';
 $bp_canonical  = 'candlelight';
 $bp_brand_name = 'Candlelight Cabinetry';
 $bp_eyebrow    = 'Cabinetry partner';
 $bp_hero_image = BASEURL . 'flash/big/5.png';
 $bp_story = [
-  'Candlelight is built in Buffalo, New York, by a family-owned cabinet shop that has been operating since 1989. Every box, drawer, and door is made in the United States from solid wood and plywood — no MDF, no particleboard.',
+  'Candlelight is built in Buffalo, New York, by a family-owned cabinet shop that has been operating since 1989. Every box, drawer, and door is made in the United States from solid wood and plywood, no MDF, no particleboard.',
   'They\'re one of the few cabinet makers offering true inset doors at an attainable price point, which is why we specify them on most traditional and transitional kitchens on the North Shore.',
 ];
 $bp_products = [

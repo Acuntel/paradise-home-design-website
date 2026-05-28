@@ -288,6 +288,19 @@
   transform: translateY(-2px);
 }
 
+.pd .btn-outline-light {
+  background: rgba(251, 248, 241, 0.08);
+  color: var(--paradise-cream);
+  border-color: rgba(251, 248, 241, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.pd .btn-outline-light:hover {
+  background: var(--paradise-brass-500);
+  color: var(--paradise-forest-900);
+  border-color: var(--paradise-brass-500);
+  transform: translateY(-2px);
+}
 .pd .btn-outline-dark {
   background: transparent;
   color: var(--paradise-forest-800);

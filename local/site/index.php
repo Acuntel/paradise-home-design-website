@@ -73,7 +73,7 @@ $current_page = 'home';
 <link rel="shortcut icon" href="<?php echo BASEURL;?>assets/img/favicon.png">
 
 <!-- Preload hero image so LCP is fast -->
-<link rel="preload" as="image" href="<?php echo BASEURL;?>assets/img/banner.png">
+<link rel="preload" as="image" href="<?php echo BASEURL;?>gallery/big/1_1.png">
 
 <?php include_once("includes/headtags.php"); ?>
 </head>
@@ -84,7 +84,7 @@ $current_page = 'home';
 
 <?php
   $hero_variant = 'fullscreen';
-  $hero_image   = BASEURL . 'assets/img/banner.png';
+  $hero_image   = BASEURL . 'gallery/big/1_1.png';
   $hero_eyebrow = 'Lake Forest · North Shore Chicago';
   $hero_title   = "Kitchens designed for the way you actually live.";
   $hero_description = '38 years on Chicago\'s North Shore. Lake Forest based, owner-led, every project.';
@@ -110,12 +110,12 @@ $current_page = 'home';
     <div class="pd-grid pd-grid-3 pd-grid-staggered">
       <?php
         $projects = [
-          ['img' => BASEURL.'indexpage/big/1_1.png', 'title' => 'Modern white kitchen with brass accents', 'location' => 'Lake Forest, IL'],
-          ['img' => BASEURL.'indexpage/big/1_2.png', 'title' => 'Two-tone island kitchen',                  'location' => 'Highland Park, IL'],
-          ['img' => BASEURL.'indexpage/big/1_3.png', 'title' => 'Classic shaker remodel',                   'location' => 'Winnetka, IL'],
-          ['img' => BASEURL.'assets/img/hero/hero-2.jpg', 'title' => 'Contemporary open-concept',            'location' => 'Buffalo Grove, IL'],
-          ['img' => BASEURL.'assets/img/hero/hero-3.jpg', 'title' => 'Transitional kitchen + dining',        'location' => 'Glencoe, IL'],
-          ['img' => BASEURL.'assets/img/hero/hero-4.jpg', 'title' => 'Bathroom suite with marble countertop','location' => 'Deerfield, IL'],
+          ['img' => BASEURL.'gallery/big/25_1.png',     'title' => 'Black cabinetry, marble island',        'location' => 'Lake Forest, IL'],
+          ['img' => BASEURL.'gallery/big/30_1.png',     'title' => 'Navy island + open staircase',          'location' => 'Highland Park, IL'],
+          ['img' => BASEURL.'highland/big/3_1.png',     'title' => 'White shaker family kitchen',            'location' => 'Highland Park, IL'],
+          ['img' => BASEURL.'lakeforest/big/3_1.png',   'title' => 'Double-vanity primary bath',             'location' => 'Lake Forest, IL'],
+          ['img' => BASEURL.'highland/big/5_1.png',     'title' => 'White kitchen + marble counters',        'location' => 'Highland Park, IL'],
+          ['img' => BASEURL.'lakeforest/big/7_1.png',   'title' => 'Spa bath with vessel sinks',             'location' => 'Lake Forest, IL'],
         ];
         foreach ($projects as $p) {
           $proj_image = $p['img']; $proj_title = $p['title']; $proj_location = $p['location'];
@@ -143,10 +143,10 @@ $current_page = 'home';
     <div class="pd-grid pd-grid-4">
       <?php
         $services = [
-          ['img' => BASEURL.'assets/img/hero/hero-5.jpg', 'h' => 'Kitchens',     't' => 'Custom cabinetry, integrated appliances, and islands that actually fit the way you cook.',  'href' => BASEURL.'kitchens.html'],
-          ['img' => BASEURL.'assets/img/hero/hero-3.jpg', 'h' => 'Bathrooms',    't' => 'From spa-style primary suites to compact powder rooms. Tile, stone, fixtures, lighting.',     'href' => BASEURL.'bathrooms.html'],
-          ['img' => BASEURL.'assets/img/hero/hero-4.jpg', 'h' => 'Countertops',  't' => 'Quartz, quartzite, marble, and natural stone. Sourced direct from Mercier, Mirage, Casabella.','href' => BASEURL.'counter_tops.html'],
-          ['img' => BASEURL.'assets/img/hero/hero-2.jpg', 'h' => 'Full home',    't' => 'Multi-room remodels and new-build interiors. One designer, one project manager, one contract.','href' => BASEURL.'about.html'],
+          ['img' => BASEURL.'lakeforest/big/1_1.png',   'h' => 'Kitchens',     't' => 'Custom cabinetry, integrated appliances, and islands that actually fit the way you cook.',  'href' => BASEURL.'kitchens.html'],
+          ['img' => BASEURL.'lakeforest/big/3_1.png',   'h' => 'Bathrooms',    't' => 'From spa-style primary suites to compact powder rooms. Tile, stone, fixtures, lighting.',     'href' => BASEURL.'bathrooms.html'],
+          ['img' => BASEURL.'gallery/big/29_1.png',     'h' => 'Countertops',  't' => 'Quartz, quartzite, marble, and natural stone. Sourced direct from Mercier, Mirage, Casabella.','href' => BASEURL.'counter_tops.html'],
+          ['img' => BASEURL.'highland/big/1_1.png',     'h' => 'Full home',    't' => 'Multi-room remodels and new-build interiors. One designer, one project manager, one contract.','href' => BASEURL.'about.html'],
         ];
         foreach ($services as $s) {
           $svc_image = $s['img']; $svc_heading = $s['h']; $svc_text = $s['t']; $svc_href = $s['href']; $svc_link_text = 'See examples';
@@ -196,7 +196,7 @@ $current_page = 'home';
 <section>
   <div class="container">
     <div class="pd-split mb-5" data-reveal>
-      <div class="pd-split-media"><img src="<?php echo BASEURL; ?>assets/img/hero/hero-5.jpg" alt="Owner-led design" loading="lazy"></div>
+      <div class="pd-split-media"><img src="<?php echo BASEURL; ?>gallery/big/30_1.png" alt="Owner-led design — navy island kitchen, Lake Forest" loading="lazy"></div>
       <div>
         <span class="eyebrow">Owner-led</span>
         <h2>The owner is on every project. Including yours.</h2>
@@ -204,7 +204,7 @@ $current_page = 'home';
       </div>
     </div>
     <div class="pd-split reverse mb-5" data-reveal>
-      <div class="pd-split-media"><img src="<?php echo BASEURL; ?>assets/img/hero/hero-3.jpg" alt="Premium brands" loading="lazy"></div>
+      <div class="pd-split-media"><img src="<?php echo BASEURL; ?>gallery/big/29_1.png" alt="Premium materials — marble counter on navy cabinetry" loading="lazy"></div>
       <div>
         <span class="eyebrow">Premium materials</span>
         <h2>Direct relationships with brands that don't sell to box stores.</h2>
@@ -212,7 +212,7 @@ $current_page = 'home';
       </div>
     </div>
     <div class="pd-split" data-reveal>
-      <div class="pd-split-media"><img src="<?php echo BASEURL; ?>assets/img/hero/hero-4.jpg" alt="North Shore expertise" loading="lazy"></div>
+      <div class="pd-split-media"><img src="<?php echo BASEURL; ?>highland/big/3_1.png" alt="North Shore expertise — white shaker kitchen, Highland Park" loading="lazy"></div>
       <div>
         <span class="eyebrow">North Shore experts</span>
         <h2>38 years building for one of the most demanding markets in the country.</h2>

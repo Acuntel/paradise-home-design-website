@@ -9,9 +9,12 @@ $cp_hero_image = BASEURL . 'flash/big/5.png';
 $cp_zip_codes = ['60045'];
 $cp_neighborhoods = ['East Lake Forest', 'West Lake Forest', 'Knollwood', 'Conway Farms', 'Everett'];
 $cp_projects = [
-  ['img' => BASEURL.'indexpage/big/1_1.png', 'title' => 'Modern white kitchen, brass accents', 'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'flash/big/5.png', 'title' => 'Full-home Lake Forest remodel', 'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'indexpage/big/1_2.png', 'title' => 'Inset Candlelight kitchen', 'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest/big/1_1.png', 'title' => 'Navy island + open staircase', 'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest/big/2_1.png', 'title' => 'White shaker + brass pulls',    'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest/big/3_1.png', 'title' => 'Double-vanity primary bath',    'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest/big/5_1.png', 'title' => 'Marble sink + brass faucet',    'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest/big/7_1.png', 'title' => 'Spa bath, vessel sinks',        'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest/big/8_1.png', 'title' => 'Open white kitchen + island',   'location' => 'Lake Forest, IL'],
 ];
 include "includes/components/city_page.php";
 ?>

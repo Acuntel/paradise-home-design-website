@@ -9,9 +9,12 @@ $cp_hero_image = BASEURL . 'flash/big/1.png';
 $cp_zip_codes = ['60089'];
 $cp_neighborhoods = ['Aptakisic-Tripp', 'Old Buffalo Grove', 'Cherbourg'];
 $cp_projects = [
-  ['img' => BASEURL.'flash/big/1.png', 'title' => 'Galaxy white shaker kitchen', 'location' => 'Buffalo Grove, IL'],
-  ['img' => BASEURL.'indexpage/big/1_2.png', 'title' => 'Open-concept remodel', 'location' => 'Buffalo Grove, IL'],
-  ['img' => BASEURL.'flash/big/4.png', 'title' => 'Hand-scraped wide-plank floor', 'location' => 'Buffalo Grove, IL'],
+  ['img' => BASEURL.'buffalogrove1/big/1_1.png', 'title' => 'White kitchen, chandelier',      'location' => 'Buffalo Grove, IL'],
+  ['img' => BASEURL.'buffalogrove1/big/5_1.png', 'title' => 'White cabinets, hardwood',       'location' => 'Buffalo Grove, IL'],
+  ['img' => BASEURL.'buffalogrove1/big/9_1.png', 'title' => 'White kitchen, stainless range', 'location' => 'Buffalo Grove, IL'],
+  ['img' => BASEURL.'buffalogrove1/big/3_1.png', 'title' => 'Open-concept remodel',           'location' => 'Buffalo Grove, IL'],
+  ['img' => BASEURL.'buffalogrove1/big/7_1.png', 'title' => 'Family kitchen + island',        'location' => 'Buffalo Grove, IL'],
+  ['img' => BASEURL.'buffalogrove1/big/10_1.png','title' => 'Buffalo Grove kitchen remodel',  'location' => 'Buffalo Grove, IL'],
 ];
 include "includes/components/city_page.php";
 ?>

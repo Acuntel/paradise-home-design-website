@@ -9,9 +9,12 @@ $cp_hero_image = BASEURL . 'flash/big/1.png';
 $cp_zip_codes = ['60093'];
 $cp_neighborhoods = ['Hubbard Woods', 'East Winnetka', 'Indian Hill'];
 $cp_projects = [
-  ['img' => BASEURL.'flash/big/6.png', 'title' => 'Classic shaker remodel', 'location' => 'Winnetka, IL'],
-  ['img' => BASEURL.'flash/big/1.png', 'title' => 'Open-concept kitchen + dining', 'location' => 'Winnetka, IL'],
-  ['img' => BASEURL.'indexpage/big/1_1.png', 'title' => 'Wide-plank floor + custom cabinets', 'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'winnetka/big/3.png',  'title' => 'White shaker galley',             'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'winnetka/big/6.png',  'title' => 'Open white island kitchen',       'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'winnetka/big/8.png',  'title' => 'White kitchen + brass island',    'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'winnetka/big/9.png',  'title' => 'Gas cooktop on quartz',           'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'winnetka/big/12.png', 'title' => 'Marble island + brass faucet',    'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'winnetka/big/14.png', 'title' => 'Custom Winnetka kitchen',         'location' => 'Winnetka, IL'],
 ];
 include "includes/components/city_page.php";
 ?>

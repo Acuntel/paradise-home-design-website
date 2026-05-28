@@ -9,9 +9,12 @@ $cp_hero_image = BASEURL . 'flash/big/4.png';
 $cp_zip_codes = ['60035'];
 $cp_neighborhoods = ['Ravinia', 'Highwood', 'Briergate', 'Sherwood Forest'];
 $cp_projects = [
-  ['img' => BASEURL.'indexpage/big/1_2.png', 'title' => 'Two-tone island kitchen', 'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'flash/big/4.png', 'title' => 'Walk-in shower remodel', 'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'indexpage/big/1_1.png', 'title' => 'Painted shaker kitchen', 'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'highland2/big/1_1.png', 'title' => 'Cherry traditional + granite',  'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'highland3/big/1_1.png', 'title' => 'Two-tone white + gray island',  'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'highland3/big/5_1.png', 'title' => 'Modern white kitchen',          'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'highland3/big/7_1.png', 'title' => 'Granite vessel-sink bath',      'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'highland3/big/10_1.png','title' => 'White inset kitchen',           'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'highland/big/1_1.png',  'title' => 'Dark navy built-in cabinetry',  'location' => 'Highland Park, IL'],
 ];
 include "includes/components/city_page.php";
 ?>

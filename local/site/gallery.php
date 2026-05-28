@@ -61,18 +61,59 @@ $baseurl = BASEURL;
 
     <?php
       // Build gallery items. Pulling from existing assets on the server.
+      // Full library: 36 real finished-project photos across kitchens, bathrooms, countertops.
       $items = [
-        ['src' => 'flash/big/2.png',           'title' => 'Black cabinets, marble, brass',   'meta' => 'Lake Forest · 2025',  'tags' => 'kitchen modern'],
-        ['src' => 'flash/big/1.png',           'title' => 'Blue island, subway tile',        'meta' => 'Highland Park · 2024','tags' => 'kitchen traditional'],
-        ['src' => 'flash/big/5.png',           'title' => 'Custom white shaker kitchen',     'meta' => 'Lake Forest · 2024',  'tags' => 'kitchen modern'],
-        ['src' => 'flash/big/7.png',           'title' => 'Traditional cherry kitchen',      'meta' => 'Winnetka · 2024',     'tags' => 'kitchen traditional'],
-        ['src' => 'flash/big/6.png',           'title' => 'Coastal white + tiffany island',  'meta' => 'Florida · 2024',      'tags' => 'kitchen modern'],
-        ['src' => 'flash/big/3.png',           'title' => 'Gothic-style built-in cabinetry', 'meta' => 'Lake Forest · 2024',  'tags' => 'kitchen traditional'],
-        ['src' => 'flash/big/4.png',           'title' => 'Spa bath with floating vanity',   'meta' => 'Highland Park · 2024','tags' => 'bathroom modern'],
-        ['src' => 'lakeforest/big/3_1.png',    'title' => 'Double-vanity primary bath',      'meta' => 'Deerfield · 2024',    'tags' => 'bathroom traditional'],
-        ['src' => 'lakeforest/big/7_1.png',    'title' => 'Powder room with vessel sinks',   'meta' => 'Winnetka · 2024',     'tags' => 'bathroom modern'],
-        ['src' => 'indexpage/big/1_1.png',     'title' => 'White kitchen, brass pulls',      'meta' => 'Lake Forest · 2025',  'tags' => 'kitchen modern'],
-        ['src' => 'indexpage/big/1_2.png',     'title' => 'Two-tone blue island kitchen',    'meta' => 'Highland Park · 2024','tags' => 'kitchen traditional'],
+        // Showcase flash photos
+        ['src' => 'flash/big/2.png',           'title' => 'Black cabinets, marble, brass',     'meta' => 'Lake Forest', 'tags' => 'kitchen modern'],
+        ['src' => 'flash/big/1.png',           'title' => 'Blue island, subway tile',          'meta' => 'Highland Park', 'tags' => 'kitchen traditional'],
+        ['src' => 'flash/big/5.png',           'title' => 'Custom white shaker',               'meta' => 'Lake Forest', 'tags' => 'kitchen modern'],
+        ['src' => 'flash/big/7.png',           'title' => 'Traditional cherry kitchen',        'meta' => 'Winnetka', 'tags' => 'kitchen traditional'],
+        ['src' => 'flash/big/6.png',           'title' => 'Coastal white + tiffany island',    'meta' => 'Florida', 'tags' => 'kitchen modern'],
+        ['src' => 'flash/big/3.png',           'title' => 'Gothic gray built-in cabinetry',    'meta' => 'Lake Forest', 'tags' => 'kitchen traditional'],
+        ['src' => 'flash/big/4.png',           'title' => 'Spa bath, floating vanity',         'meta' => 'Highland Park', 'tags' => 'bathroom modern'],
+
+        // Lake Forest projects
+        ['src' => 'lakeforest/big/1_1.png',    'title' => 'Navy island + open staircase',      'meta' => 'Lake Forest', 'tags' => 'kitchen traditional'],
+        ['src' => 'lakeforest/big/2_1.png',    'title' => 'White shaker + brass pulls',        'meta' => 'Lake Forest', 'tags' => 'kitchen modern'],
+        ['src' => 'lakeforest/big/3_1.png',    'title' => 'Double-vanity primary bath',        'meta' => 'Lake Forest', 'tags' => 'bathroom traditional'],
+        ['src' => 'lakeforest/big/4_1.png',    'title' => 'Vessel-sink powder room',           'meta' => 'Lake Forest', 'tags' => 'bathroom modern'],
+        ['src' => 'lakeforest/big/5_1.png',    'title' => 'Marble sink + brass faucet',        'meta' => 'Lake Forest', 'tags' => 'bathroom modern'],
+        ['src' => 'lakeforest/big/6_1.png',    'title' => 'Quartz island close-up',            'meta' => 'Lake Forest', 'tags' => 'countertop modern'],
+        ['src' => 'lakeforest/big/7_1.png',    'title' => 'Spa bath, vessel sinks',            'meta' => 'Lake Forest', 'tags' => 'bathroom modern'],
+        ['src' => 'lakeforest/big/8_1.png',    'title' => 'Open white kitchen + island',       'meta' => 'Lake Forest', 'tags' => 'kitchen modern'],
+
+        // Highland Park projects
+        ['src' => 'highland/big/1_1.png',      'title' => 'Dark navy built-in cabinetry',      'meta' => 'Highland Park', 'tags' => 'kitchen traditional'],
+        ['src' => 'highland/big/3_1.png',      'title' => 'White shaker family kitchen',       'meta' => 'Highland Park', 'tags' => 'kitchen modern'],
+        ['src' => 'highland/big/5_1.png',      'title' => 'White kitchen, marble counters',    'meta' => 'Highland Park', 'tags' => 'kitchen modern'],
+        ['src' => 'highland2/big/1_1.png',     'title' => 'Cherry traditional + granite',      'meta' => 'Highland Park', 'tags' => 'kitchen traditional'],
+        ['src' => 'highland2/big/4_1.png',     'title' => 'Cherry kitchen, glass cabinets',    'meta' => 'Highland Park', 'tags' => 'kitchen traditional'],
+        ['src' => 'highland3/big/1_1.png',     'title' => 'Two-tone white + gray island',      'meta' => 'Highland Park', 'tags' => 'kitchen modern'],
+        ['src' => 'highland3/big/2_1.png',     'title' => 'Open white kitchen + island',       'meta' => 'Highland Park', 'tags' => 'kitchen modern'],
+        ['src' => 'highland3/big/5_1.png',     'title' => 'Modern white kitchen + pendants',   'meta' => 'Highland Park', 'tags' => 'kitchen modern'],
+        ['src' => 'highland3/big/7_1.png',     'title' => 'Granite vessel-sink bath',          'meta' => 'Highland Park', 'tags' => 'bathroom modern'],
+        ['src' => 'highland3/big/10_1.png',    'title' => 'White inset kitchen + pendants',    'meta' => 'Highland Park', 'tags' => 'kitchen traditional'],
+
+        // Winnetka projects
+        ['src' => 'winnetka/big/3.png',        'title' => 'White shaker galley',               'meta' => 'Winnetka', 'tags' => 'kitchen modern'],
+        ['src' => 'winnetka/big/6.png',        'title' => 'Open white island kitchen',         'meta' => 'Winnetka', 'tags' => 'kitchen modern'],
+        ['src' => 'winnetka/big/8.png',        'title' => 'White kitchen + brass island',      'meta' => 'Winnetka', 'tags' => 'kitchen modern'],
+        ['src' => 'winnetka/big/9.png',        'title' => 'Gas cooktop on quartz',             'meta' => 'Winnetka', 'tags' => 'countertop modern'],
+        ['src' => 'winnetka/big/12.png',       'title' => 'Marble island + brass faucet',      'meta' => 'Winnetka', 'tags' => 'countertop modern'],
+
+        // Chicago projects
+        ['src' => 'chicago/big/5.png',         'title' => 'High-rise white kitchen',           'meta' => 'Chicago', 'tags' => 'kitchen modern'],
+        ['src' => 'chicago/big/6.png',         'title' => 'Loft kitchen, exposed beams',       'meta' => 'Chicago', 'tags' => 'kitchen modern'],
+        ['src' => 'chicago/big/8.png',         'title' => 'Marble close-up, brass faucet',     'meta' => 'Chicago', 'tags' => 'countertop modern'],
+        ['src' => 'chicago/big/9.png',         'title' => 'Open white kitchen, hardwood',      'meta' => 'Chicago', 'tags' => 'kitchen modern'],
+
+        // Buffalo Grove projects
+        ['src' => 'buffalogrove1/big/1_1.png', 'title' => 'White kitchen, chandelier',         'meta' => 'Buffalo Grove', 'tags' => 'kitchen traditional'],
+        ['src' => 'buffalogrove1/big/5_1.png', 'title' => 'White cabinets, hardwood',          'meta' => 'Buffalo Grove', 'tags' => 'kitchen modern'],
+        ['src' => 'buffalogrove1/big/9_1.png', 'title' => 'White kitchen, stainless range',    'meta' => 'Buffalo Grove', 'tags' => 'kitchen modern'],
+
+        // Built-ins
+        ['src' => 'ourproducts/big/2_1.png',   'title' => 'Gray built-in entertainment',       'meta' => 'Lake Forest', 'tags' => 'kitchen modern'],
       ];
       foreach ($items as $i => $it):
     ?>

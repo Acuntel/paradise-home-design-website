@@ -40,7 +40,7 @@ $baseurl = defined('BASEURL') ? BASEURL : '/';
 <link rel="preload" as="image" href="<?php echo $sp_hero_image; ?>">
 <?php include_once("includes/headtags.php"); ?>
 </head>
-<body class="pd">
+<body class="pd pd-page-<?php echo htmlspecialchars($sp_current_page ?? ''); ?>">
 
 <?php include_once("includes/components/nav.php"); ?>
 
@@ -54,6 +54,9 @@ $baseurl = defined('BASEURL') ? BASEURL : '/';
   $hero_show_scroll = false;
   include "includes/components/hero.php";
 ?>
+
+<?php $crumbs=[['name'=>'Home','url'=>$baseurl],['name'=>$sp_hero_eyebrow,'url'=>$baseurl.$sp_canonical.'.html']]; include "includes/components/breadcrumbs.php"; ?>
+
 
 <!-- Intro -->
 <section>
@@ -119,6 +122,26 @@ $baseurl = defined('BASEURL') ? BASEURL : '/';
   </div>
 </section>
 <?php endif; ?>
+
+<!-- Areas we serve (internal links to city pages) -->
+<section class="section-alt">
+  <div class="container" style="max-width:880px;text-align:center" data-reveal>
+    <span class="eyebrow">Areas we serve</span>
+    <h2>Serving Chicago&rsquo;s North Shore.</h2>
+    <p class="pd-inline-links">
+      <a href="<?php echo $baseurl; ?>lakeforest.html">Lake Forest</a>
+      <a href="<?php echo $baseurl; ?>highland.html">Highland Park</a>
+      <a href="<?php echo $baseurl; ?>winnetka.html">Winnetka</a>
+      <a href="<?php echo $baseurl; ?>buffalo_grove.html">Buffalo Grove</a>
+      <a href="<?php echo $baseurl; ?>vernon_hills.html">Vernon Hills</a>
+      <a href="<?php echo $baseurl; ?>chicago.html">Chicago</a>
+    </p>
+  </div>
+</section>
+
+<?php include "includes/components/faq.php"; ?>
+
+<?php include "includes/components/lead_form_section.php"; ?>
 
 <?php include "includes/components/cta_banner.php"; ?>
 

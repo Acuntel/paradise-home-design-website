@@ -27,7 +27,7 @@ $address = $contact['Address'] ?? '225 E Deerpath Rd, Unit #80, Lake Forest, IL 
 
 <?php
   $hero_variant = 'compact';
-  $hero_image = $baseurl . 'flash/big/4.png';
+  $hero_image = $baseurl . 'flash/big/4.webp';
   $hero_eyebrow = 'Get in touch';
   $hero_title = "Let's talk about your project.";
   $hero_description = 'Free consultation. We respond within one business day.';
@@ -46,7 +46,7 @@ $address = $contact['Address'] ?? '225 E Deerpath Rd, Unit #80, Lake Forest, IL 
         <p class="mt-3"><strong>Address</strong><br><?php echo htmlspecialchars($address); ?></p>
         <p class="mt-3"><strong>Phone</strong><br><a href="tel:+1<?php echo preg_replace('/\D/', '', $phone_raw); ?>" style="color:var(--paradise-brass-500);font-family:var(--font-display);font-size:1.5rem"><?php echo htmlspecialchars($phone_raw); ?></a></p>
         <p class="mt-3"><strong>Email</strong><br><a href="mailto:<?php echo htmlspecialchars($email); ?>" style="color:var(--paradise-ink-900);border-bottom:1px solid var(--paradise-brass-500)"><?php echo htmlspecialchars($email); ?></a></p>
-        <p class="mt-3"><strong>Hours</strong><br>Monday–Friday · 9am to 5pm<br>Saturday by appointment</p>
+        <p class="mt-3"><strong>Hours</strong><br>Monday–Friday · 10am to 5pm<br>Saturday by appointment</p>
 
         <!-- Static Google Map -->
         <div style="margin-top:2rem">

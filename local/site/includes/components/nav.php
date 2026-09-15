@@ -41,7 +41,7 @@ $phone_href = 'tel:+1' . preg_replace('/\D/', '', $phone_raw);
         Call
       </a>
       <a class="btn btn-primary pd-nav-cta" href="<?php echo $baseurl; ?>design_consultation.html">Free Consultation</a>
-      <button class="pd-nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <button type="button" class="pd-nav-hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>

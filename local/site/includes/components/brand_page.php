@@ -12,6 +12,9 @@
  *   $bp_story          array of 2-3 short paragraphs
  *   $bp_products       array of ['name' => ..., 'desc' => ...] (8 items)
  *   $bp_projects       array of project tiles
+ *   $bp_gallery        array of image paths (relative to BASEURL) -> photo gallery section
+ *   $bp_gallery_eyebrow / $bp_gallery_heading / $bp_gallery_desc / $bp_gallery_alt   copy overrides
+ *   $bp_gallery_product  true = catalog/product shots: square tiles, whole image shown, no crop
  *   $bp_current_page   nav active key (default 'kitchens')
  */
 $current_page = $bp_current_page ?? '';
@@ -51,6 +54,9 @@ $baseurl = defined('BASEURL') ? BASEURL : '/';
   include "includes/components/hero.php";
 ?>
 
+<?php $crumbs=[['name'=>'Home','url'=>$baseurl],['name'=>'Brands','url'=>$baseurl.'brands.html'],['name'=>$bp_brand_name,'url'=>$baseurl.$bp_canonical.'.html']]; include "includes/components/breadcrumbs.php"; ?>
+
+
 <!-- Story -->
 <section>
   <div class="container" style="max-width:780px">
@@ -64,9 +70,32 @@ $baseurl = defined('BASEURL') ? BASEURL : '/';
   </div>
 </section>
 
+<?php if (!empty($bp_gallery)): ?>
+<!-- Brand gallery — real installed photos -->
+<section class="section-alt">
+  <div class="container">
+    <?php
+      $sh_eyebrow = $bp_gallery_eyebrow ?? 'Gallery';
+      $sh_heading = $bp_gallery_heading ?? ($bp_brand_name . ' in real kitchens.');
+      $sh_description = $bp_gallery_desc ?? ('A selection of finished projects featuring ' . $bp_brand_name . '.');
+      $sh_centered = true;
+      include "includes/components/section_header.php";
+      $bp_gallery_alt = $bp_gallery_alt ?? ($bp_brand_name . ' kitchen project by Paradise Home Design');
+    ?>
+    <div class="pd-brand-gallery<?php echo !empty($bp_gallery_product) ? ' pd-brand-gallery--product' : ''; ?>">
+      <?php foreach ($bp_gallery as $g): $gsrc = $baseurl . ltrim($g, '/'); ?>
+        <button type="button" class="pd-brand-gallery-item" data-lightbox="<?php echo $gsrc; ?>" data-reveal aria-label="Enlarge <?php echo htmlspecialchars($bp_brand_name); ?> photo">
+          <img src="<?php echo $gsrc; ?>" alt="<?php echo htmlspecialchars($bp_gallery_alt); ?>" loading="lazy">
+        </button>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+
 <?php if (!empty($bp_products)): ?>
 <!-- Products -->
-<section class="section-alt">
+<section>
   <div class="container">
     <?php
       $sh_eyebrow = 'Featured lines';
@@ -88,25 +117,7 @@ $baseurl = defined('BASEURL') ? BASEURL : '/';
 </section>
 <?php endif; ?>
 
-<?php if (!empty($bp_projects)): ?>
-<!-- See it in our projects -->
-<section>
-  <div class="container">
-    <?php
-      $sh_eyebrow = 'See it installed';
-      $sh_heading = 'In Paradise projects.';
-      $sh_centered = true;
-      include "includes/components/section_header.php";
-    ?>
-    <div class="pd-grid pd-grid-3 pd-grid-staggered">
-      <?php foreach ($bp_projects as $p):
-        $proj_image = $p['img']; $proj_title = $p['title']; $proj_location = $p['location']; $proj_href = $baseurl . 'gallery.html';
-        include "includes/components/project_tile.php";
-      endforeach; ?>
-    </div>
-  </div>
-</section>
-<?php endif; ?>
+<?php // "In Paradise projects" section removed site-wide per client request (2026-06-15). ?>
 
 <?php
   $cta_heading = 'Want to see ' . $bp_brand_name . ' in person?';

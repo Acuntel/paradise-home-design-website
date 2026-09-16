@@ -16,7 +16,7 @@
         setTimeout(() => {
           preloader.classList.add("dismissed");
           sessionStorage.setItem("pd_preloaded", "1");
-        }, 2400);
+        }, 1100);
       });
     }
   }
@@ -74,6 +74,51 @@
       .forEach((a) => a.addEventListener("click", close));
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") close();
+    });
+  }
+
+  // ------------------------------------------------------------
+  // Lightbox: click a [data-lightbox] element to enlarge its photo
+  // in place. No navigation, no dependencies.
+  // ------------------------------------------------------------
+  const triggers = document.querySelectorAll("[data-lightbox]");
+  if (triggers.length) {
+    const box = document.createElement("div");
+    box.className = "pd-lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-hidden", "true");
+    box.innerHTML =
+      '<button type="button" class="pd-lightbox-close" aria-label="Close">&times;</button>' +
+      '<img class="pd-lightbox-img" src="" alt="">';
+    document.body.appendChild(box);
+    const img = box.querySelector(".pd-lightbox-img");
+
+    const openBox = (src) => {
+      img.src = src;
+      box.classList.add("open");
+      box.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+    const closeBox = () => {
+      box.classList.remove("open");
+      box.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      img.src = "";
+    };
+
+    triggers.forEach((t) => {
+      t.addEventListener("click", () => {
+        const src = t.getAttribute("data-lightbox");
+        if (src) openBox(src);
+      });
+    });
+    box.addEventListener("click", (e) => {
+      if (e.target === box || e.target.classList.contains("pd-lightbox-close"))
+        closeBox();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && box.classList.contains("open")) closeBox();
     });
   }
 })();

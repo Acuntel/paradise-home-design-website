@@ -26,6 +26,7 @@ $phone_href = 'tel:+1' . preg_replace('/\D/', '', $phone_raw);
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php echo htmlspecialchars($cp_title); ?></title>
 <meta name="description" content="<?php echo htmlspecialchars($cp_meta_desc); ?>">
+<meta name="robots" content="<?php echo !empty($cp_noindex) ? 'noindex, follow' : 'index, follow'; ?>"/>
 <link rel="canonical" href="https://www.paradisehomedesigninc.com/<?php echo $cp_canonical; ?>.html" />
 <meta property="og:title" content="<?php echo htmlspecialchars($cp_title); ?>" />
 <meta property="og:description" content="<?php echo htmlspecialchars($cp_meta_desc); ?>" />
@@ -36,15 +37,32 @@ $phone_href = 'tel:+1' . preg_replace('/\D/', '', $phone_raw);
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Paradise Home Design Inc, <?php echo $cp_city_name; ?>",
+  "@type": ["LocalBusiness", "GeneralContractor", "HomeAndConstructionBusiness"],
+  "name": "Paradise Home Design Inc",
+  "description": "Kitchen and bathroom remodeling serving <?php echo $cp_city_name; ?>, IL.",
   "url": "https://www.paradisehomedesigninc.com/<?php echo $cp_canonical; ?>.html",
-  "telephone": "+1<?php echo preg_replace('/\D/', '', $phone_raw); ?>",
-  "areaServed": "<?php echo $cp_city_name; ?>, IL",
-  "image": "https://www.paradisehomedesigninc.com<?php echo $cp_hero_image; ?>"
+  "telephone": "+1-847-681-9000",
+  "email": "paradisehd400@gmail.com",
+  "image": "https://www.paradisehomedesigninc.com<?php echo $cp_hero_image; ?>",
+  "priceRange": "$$$",
+  "foundingDate": "1986",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "225 E Deerpath Rd Unit #80",
+    "addressLocality": "Lake Forest",
+    "addressRegion": "IL",
+    "postalCode": "60045",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "<?php echo $cp_city_name; ?>", "containedInPlace": { "@type": "AdministrativeArea", "name": "Illinois" } },
+  "sameAs": [
+    "https://www.facebook.com/paradisehomedesiginc/",
+    "https://www.instagram.com/paradisehomedesigninc/",
+    "https://www.yelp.com/biz/paradise-home-design-lake-forest"
+  ]
 }
 </script>
-<?php include_once("includes/headtags.php"); ?>
+<?php $has_page_schema = true; include_once("includes/headtags.php"); ?>
 </head>
 <body class="pd">
 
@@ -55,11 +73,25 @@ $phone_href = 'tel:+1' . preg_replace('/\D/', '', $phone_raw);
   $hero_image   = $cp_hero_image;
   $hero_eyebrow = 'Serving ' . $cp_city_name . ', IL';
   $hero_title   = 'Kitchen + bath remodeling in ' . $cp_city_name . '.';
-  $hero_description = '38 years working in ' . $cp_city_name . ' and surrounding North Shore communities. Owner-led. Lake Forest based.';
+  $hero_description = 'Over 37 years working in ' . $cp_city_name . ' and surrounding North Shore communities. Owner-led. Lake Forest based.';
   $hero_preloader = false;
   $hero_show_scroll = false;
   include "includes/components/hero.php";
 ?>
+
+<?php $crumbs=[['name'=>'Home','url'=>$baseurl],['name'=>$cp_city_name,'url'=>$baseurl.$cp_canonical.'.html']]; include "includes/components/breadcrumbs.php"; ?>
+
+
+<?php if (!empty($cp_intro)): ?>
+<!-- Unique local intro -->
+<section>
+  <div class="container" style="max-width:780px" data-reveal>
+    <?php foreach ($cp_intro as $para): ?>
+      <p class="lead" style="margin-bottom:1.1rem"><?php echo htmlspecialchars($para); ?></p>
+    <?php endforeach; ?>
+  </div>
+</section>
+<?php endif; ?>
 
 <!-- Projects in this city -->
 <section>
@@ -90,24 +122,34 @@ $phone_href = 'tel:+1' . preg_replace('/\D/', '', $phone_raw);
       include "includes/components/section_header.php";
     ?>
     <div class="pd-grid pd-grid-3" style="gap:2rem">
-      <div data-reveal>
-        <div class="pd-process-num" style="font-size:2rem">01</div>
-        <h3 style="font-size:1.5rem">We know the housing stock.</h3>
-        <p>38 years working <?php echo $cp_city_name; ?> homes means we know the floor plans, the addition patterns, the load-bearing tells. No surprises mid-project.</p>
-      </div>
-      <div data-reveal>
-        <div class="pd-process-num" style="font-size:2rem">02</div>
-        <h3 style="font-size:1.5rem">We know the permit office.</h3>
-        <p>We pull permits in <?php echo $cp_city_name; ?> regularly. Inspectors know our crews. Approvals move faster.</p>
-      </div>
-      <div data-reveal>
-        <div class="pd-process-num" style="font-size:2rem">03</div>
-        <h3 style="font-size:1.5rem">We're a 15-minute drive.</h3>
-        <p>Lake Forest based, so we're on site fast when something needs attention. No two-hour drives from a downtown contractor.</p>
-      </div>
+      <?php
+        // Per-city reasons override the defaults. Each: ['title' => ..., 'body' => ...].
+        // The old hardcoded "15-minute drive" line was removed — it was false on Lake
+        // Forest (the HQ town) and Chicago. Defaults below are true for every town.
+        $cp_reasons = $cp_reasons ?? [
+          ['title' => 'We know the housing stock.', 'body' => 'Over 37 years working ' . $cp_city_name . ' homes means we know the floor plans, the addition patterns, the load-bearing tells. No surprises mid-project.'],
+          ['title' => 'We know the permit office.', 'body' => 'We pull permits in ' . $cp_city_name . ' regularly. Inspectors know our crews. Approvals move faster.'],
+          ['title' => 'One accountable team.', 'body' => 'Design, cabinetry, permits, and installation under one roof — Lake Forest based, owner-led, on every project.'],
+        ];
+        foreach ($cp_reasons as $i => $r): ?>
+        <div data-reveal>
+          <div class="pd-process-num" style="font-size:2rem"><?php echo sprintf('%02d', $i + 1); ?></div>
+          <h3 style="font-size:1.5rem"><?php echo htmlspecialchars($r['title']); ?></h3>
+          <p><?php echo htmlspecialchars($r['body']); ?></p>
+        </div>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
+
+<?php if (!empty($cp_extra_html)): ?>
+<!-- Unique local long-form section -->
+<section class="section-alt">
+  <div class="container" style="max-width:780px" data-reveal>
+    <?php echo $cp_extra_html; ?>
+  </div>
+</section>
+<?php endif; ?>
 
 <!-- Local context -->
 <?php if (!empty($cp_zip_codes) || !empty($cp_neighborhoods)): ?>
@@ -124,6 +166,58 @@ $phone_href = 'tel:+1' . preg_replace('/\D/', '', $phone_raw);
   </div>
 </section>
 <?php endif; ?>
+
+<!-- Internal links: services + nearby North Shore towns -->
+<section>
+  <div class="container" style="max-width:880px;text-align:center" data-reveal>
+    <span class="eyebrow">Explore</span>
+    <h2>Our remodeling services in <?php echo htmlspecialchars($cp_city_name); ?></h2>
+    <p class="pd-inline-links">
+      <a href="<?php echo $baseurl; ?>kitchens.html">Kitchen remodeling</a>
+      <a href="<?php echo $baseurl; ?>bathrooms.html">Bathroom remodeling</a>
+      <a href="<?php echo $baseurl; ?>counter_tops.html">Countertops</a>
+      <a href="<?php echo $baseurl; ?>gallery.html">Project gallery</a>
+    </p>
+    <?php
+      $pd_all_cities = [
+        'lakeforest' => 'Lake Forest', 'highland' => 'Highland Park', 'winnetka' => 'Winnetka',
+        'buffalo_grove' => 'Buffalo Grove', 'vernon_hills' => 'Vernon Hills', 'chicago' => 'Chicago',
+        'glencoe' => 'Glencoe', 'northbrook' => 'Northbrook', 'deerfield' => 'Deerfield',
+        'lake_bluff' => 'Lake Bluff', 'highwood' => 'Highwood',
+      ];
+      $pd_nearby = array_filter($pd_all_cities, function($slug) use ($cp_canonical){ return $slug !== $cp_canonical; }, ARRAY_FILTER_USE_KEY);
+      if ($pd_nearby):
+    ?>
+    <p class="small" style="margin-top:1.75rem;color:var(--paradise-stone-500)">We also remodel kitchens and baths in nearby North Shore towns:</p>
+    <p class="pd-inline-links">
+      <?php foreach ($pd_nearby as $slug => $name): ?>
+        <a href="<?php echo $baseurl . $slug; ?>.html"><?php echo htmlspecialchars($name); ?>, IL</a>
+      <?php endforeach; ?>
+    </p>
+    <?php endif; ?>
+  </div>
+</section>
+
+<?php
+  if (empty($faqs)) {
+    $faqs = [
+      ['q' => 'How much does a kitchen remodel cost in ' . $cp_city_name . ', IL?',
+       'a' => 'Most full kitchen remodels in ' . $cp_city_name . ' range from about $50,000 to $120,000+, depending on size, cabinetry, countertops, and whether walls are moved. Paradise Home Design provides a detailed written estimate after a free consultation — call (847) 681-9000.'],
+      ['q' => 'Do you pull permits in ' . $cp_city_name . '?',
+       'a' => 'Yes. As a design-build remodeler we pull all required permits with your municipality and coordinate inspections as part of the project, so your remodel stays compliant and on schedule.'],
+      ['q' => 'How long has Paradise Home Design served ' . $cp_city_name . '?',
+       'a' => 'Paradise Home Design has remodeled kitchens and bathrooms across ' . $cp_city_name . ' and the North Shore since 1986. Our showroom is in Lake Forest, a short drive away.'],
+      ['q' => 'Do you handle both design and construction?',
+       'a' => 'Yes. We are a design-build firm with an in-house design team, so one accountable team takes you from concept and product selection through construction and final installation — you do not need a separate designer.'],
+      ['q' => 'How do I get started?',
+       'a' => 'Call (847) 681-9000 or request a consultation on our website. We respond within one business day, discuss your goals and budget, and provide a written estimate before any work begins.'],
+    ];
+    $faq_heading = 'Remodeling in ' . $cp_city_name . ' — FAQs';
+  }
+  include "includes/components/faq.php";
+?>
+
+<?php include "includes/components/lead_form_section.php"; ?>
 
 <?php
   $cta_heading = 'Planning a remodel in ' . $cp_city_name . '?';

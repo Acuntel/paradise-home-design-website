@@ -7,7 +7,7 @@ $bp_meta_desc  = 'R.D. Henry custom cabinetry, founded 1981 in Wichita, Kansas. 
 $bp_canonical  = 'rdhenry';
 $bp_brand_name = 'R.D. Henry';
 $bp_eyebrow    = 'Cabinetry partner';
-$bp_hero_image = BASEURL . 'flash/big/7.png';
+$bp_hero_image = BASEURL . 'flash/big/7.webp';
 $bp_story = [
   'R.D. Henry & Co. has been building custom cabinetry since 1981, when Ron and Dan Henry started Custom Cupboards in Wichita, Kansas. Their first year produced 16 kitchens in oak with two door styles.',
   'Today they offer 104 door styles across 10 wood species with 16 stains, 19 paints, and 80+ premium finishes. Their Revola line introduced frameless construction. We specify R.D. Henry when clients want the broadest possible custom palette.',
@@ -23,10 +23,20 @@ $bp_products = [
   ['name' => 'Lifetime warranty',  'desc' => 'On the cabinet construction.'],
 ];
 $bp_projects = [
-  ['img' => BASEURL.'flash/big/7.png', 'title' => 'Custom cherry traditional', 'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'flash/big/2.png', 'title' => 'Painted custom kitchen',     'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'flash/big/3.png', 'title' => 'Built-in library + bar',     'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Custom cherry traditional', 'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'flash/big/2.webp', 'title' => 'Painted custom kitchen',     'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'flash/big/3.webp', 'title' => 'Built-in library + bar',     'location' => 'Winnetka, IL'],
 ];
 $bp_current_page = 'kitchens';
+$bp_gallery = [
+  'assets/img/gallery/henry/1.webp',
+  'assets/img/gallery/henry/2.webp',
+  'assets/img/gallery/henry/3.webp',
+  'assets/img/gallery/henry/4.webp',
+  'assets/img/gallery/henry/5.webp',
+  'assets/img/gallery/henry/6.webp',
+  'assets/img/gallery/henry/7.webp',
+  'assets/img/gallery/henry/8.webp',
+];
 include "includes/components/brand_page.php";
 ?>

@@ -6,7 +6,7 @@
 $trust_items = $trust_items ?? [
   ['number' => '38+', 'label' => 'Years on the North Shore'],
   ['number' => '500+', 'label' => 'Kitchens designed'],
-  ['number' => '',    'label' => 'NKBA member'],
+  ['stars' => true, 'number' => '5.0', 'label' => 'on Google & BBB'],
   ['number' => '',    'label' => 'Lake Forest based'],
 ];
 ?>
@@ -15,6 +15,7 @@ $trust_items = $trust_items ?? [
     <?php foreach ($trust_items as $i => $item):
       if ($i > 0): ?><span class="pd-trust-divider" aria-hidden="true"></span><?php endif; ?>
       <div class="pd-trust-item">
+        <?php if (!empty($item['stars'])): ?><span class="pd-trust-stars" aria-hidden="true">★★★★★</span> <?php endif; ?>
         <?php if (!empty($item['number'])): ?><strong><?php echo htmlspecialchars($item['number']); ?></strong><?php endif; ?>
         <?php echo htmlspecialchars($item['label']); ?>
       </div>

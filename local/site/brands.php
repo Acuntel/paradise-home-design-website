@@ -11,7 +11,7 @@ $baseurl = BASEURL;
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Brands We Carry · Paradise Home Design · Lake Forest, IL</title>
-<meta name="description" content="The cabinetry, flooring, countertop, and hardware brands Paradise Home Design carries. Candlelight, Fabuwood, Homecrest, Holiday Kitchens, Medallion, R.D. Henry, Woodland, Mercier, Mirage, Kährs, Casabella, Richelieu, Schaub.">
+<meta name="description" content="The cabinetry, flooring, countertop, and hardware brands Paradise Home Design carries. Quality Custom (QCCI), Adelphi Kitchens, Holiday Kitchens, Fabuwood, Homecrest, Mercier, Mirage, Kährs, Casabella, Schaub, Richelieu, Top Knobs.">
 <link rel="canonical" href="https://www.paradisehomedesigninc.com/brands.html" />
 <meta property="og:title" content="Brands · Paradise Home Design" />
 <meta name="robots" content="index, follow"/>
@@ -24,7 +24,7 @@ $baseurl = BASEURL;
 
 <?php
   $hero_variant = 'compact';
-  $hero_image = $baseurl . 'flash/big/7.png';
+  $hero_image = $baseurl . 'flash/big/7.webp';
   $hero_eyebrow = 'Brands we carry';
   $hero_title = 'The makers behind the work.';
   $hero_description = 'Direct relationships with cabinetry, flooring, countertop, and hardware brands that don\'t sell to box stores.';
@@ -45,13 +45,11 @@ $baseurl = BASEURL;
     <div class="pd-grid pd-grid-3 pd-grid-staggered">
       <?php
         $cabinetry = [
-          ['name' => 'Candlelight',     'desc' => 'Inset and overlay custom, family-owned in Buffalo NY since 1989.', 'href' => $baseurl.'candlelight.html'],
+          ['name' => 'Quality Custom (QCCI)', 'desc' => 'Our finest cabinetry — heirloom-grade true custom from Lancaster County, PA, since 1968.', 'href' => $baseurl.'qcci.html'],
+          ['name' => 'Adelphi Kitchens', 'desc' => 'Fully custom American cabinetry, family-owned since 1946, made in Pennsylvania.', 'href' => $baseurl.'adelphi.html'],
+          ['name' => 'Holiday Kitchens', 'desc' => 'Custom cabinetry, baths, and built-ins, made in the USA since 1946.', 'href' => $baseurl.'holiday_kitchen.html'],
           ['name' => 'Fabuwood',         'desc' => 'Semi-custom value, plywood box construction, made in New Jersey.', 'href' => $baseurl.'fabuwood.html'],
           ['name' => 'Homecrest',        'desc' => 'American-made semi-custom from Goshen IN, in business since 1962.', 'href' => $baseurl.'homecrest.html'],
-          ['name' => 'Holiday Kitchens', 'desc' => 'Custom cabinetry, baths, and built-ins, made in the USA since 1946.', 'href' => $baseurl.'holiday_kitchen.html'],
-          ['name' => 'Medallion',        'desc' => 'Widest style and finish palette, semi-custom price point, made in MN.', 'href' => $baseurl.'medallion.html'],
-          ['name' => 'R.D. Henry',       'desc' => '104 door styles, 10 wood species, custom + frameless options.', 'href' => $baseurl.'rdhenry.html'],
-          ['name' => 'Woodland',         'desc' => 'Family-owned in Sisseton SD, affordable custom, low-VOC finishes.', 'href' => $baseurl.'woodland.html'],
         ];
         foreach ($cabinetry as $b): ?>
           <a class="card" href="<?php echo $b['href']; ?>" data-reveal style="text-decoration:none">
@@ -107,14 +105,20 @@ $baseurl = BASEURL;
       $sh_centered = true;
       include "includes/components/section_header.php";
     ?>
-    <div class="pd-grid pd-grid-2" style="max-width:880px;margin:0 auto">
+    <div class="pd-grid pd-grid-3">
       <?php
         $hardware = [
-          ['name' => 'Richelieu', 'desc' => 'North America\'s largest decorative hardware distributor. Designer knobs, pulls, hinges, organization.', 'href' => $baseurl.'richelieu.html'],
-          ['name' => 'Schaub & Company', 'desc' => 'Hand-finished designer hardware. Symphony, Mountain Series, Italian Designs, Casa Collection.', 'href' => $baseurl.'schaub.html'],
+          ['name' => 'Schaub & Company', 'desc' => 'Hand-finished designer hardware. Symphony, Mountain Series, Italian Designs, Casa Collection.', 'href' => $baseurl.'schaub.html',    'img' => $baseurl.'assets/img/gallery/schaub/1.webp'],
+          ['name' => 'Richelieu', 'desc' => 'North America\'s largest decorative hardware distributor. Designer knobs, pulls, hinges, organization.', 'href' => $baseurl.'richelieu.html', 'img' => $baseurl.'assets/img/gallery/richelieu/4.webp'],
+          ['name' => 'Top Knobs', 'desc' => 'Designer cabinet knobs, pulls, and appliance hardware in a deep range of styles and finishes.', 'href' => $baseurl.'top_knobs.html', 'img' => $baseurl.'assets/img/gallery/top_knobs/4.webp'],
         ];
         foreach ($hardware as $b): ?>
           <a class="card" href="<?php echo $b['href']; ?>" data-reveal style="text-decoration:none">
+            <?php if (!empty($b['img'])): ?>
+            <div class="card-media" style="aspect-ratio:3/2;background:#fff">
+              <img src="<?php echo $b['img']; ?>" alt="<?php echo htmlspecialchars($b['name']); ?> cabinet hardware" loading="lazy" style="object-fit:contain;padding:6%;box-sizing:border-box">
+            </div>
+            <?php endif; ?>
             <div class="card-body" style="padding:2rem">
               <span class="eyebrow" style="font-size:.7rem">Hardware</span>
               <h3 style="font-family:var(--font-display);margin-top:.5rem"><?php echo htmlspecialchars($b['name']); ?></h3>

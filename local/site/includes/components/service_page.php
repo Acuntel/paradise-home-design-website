@@ -16,6 +16,8 @@
  *   $sp_materials_eyebrow  eyebrow for materials section
  *   $sp_materials_heading  heading for materials section
  *   $sp_projects       array of project tiles ['img'=>...,'title'=>...,'location'=>...]
+ *                      optional 'images'=>[relative paths] (+ 'tag','meta','paras') makes the
+ *                      tile open those photos in an in-page modal instead of linking to the portfolio
  *   $sp_current_page   nav active key
  */
 $current_page = $sp_current_page ?? '';
@@ -105,14 +107,19 @@ $baseurl = defined('BASEURL') ? BASEURL : '/';
 <section>
   <div class="container">
     <?php
-      $sh_eyebrow = 'Recent work';
-      $sh_heading = 'Recently completed.';
+      $sh_eyebrow = $sp_projects_eyebrow ?? 'Recent work';
+      $sh_heading = $sp_projects_heading ?? 'Recently completed.';
       $sh_centered = true;
       include "includes/components/section_header.php";
     ?>
     <div class="pd-grid pd-grid-3 pd-grid-staggered">
-      <?php foreach ($sp_projects as $p):
+      <?php $pm_projects = [];
+      foreach ($sp_projects as $p):
         $proj_image = $p['img']; $proj_title = $p['title']; $proj_location = $p['location']; $proj_href = $baseurl . 'gallery.html';
+        if (!empty($p['images'])) {
+          $proj_open = count($pm_projects);
+          $pm_projects[] = ['name' => $p['title'], 'tag' => $p['tag'] ?? '', 'meta' => $p['meta'] ?? '', 'paras' => $p['paras'] ?? [], 'images' => $p['images']];
+        }
         include "includes/components/project_tile.php";
       endforeach; ?>
     </div>
@@ -121,21 +128,15 @@ $baseurl = defined('BASEURL') ? BASEURL : '/';
     </div>
   </div>
 </section>
+<?php if (!empty($pm_projects)) include "includes/components/project_modal.php"; ?>
 <?php endif; ?>
 
-<!-- Areas we serve (internal links to city pages) -->
+<!-- Areas we serve -->
 <section class="section-alt">
   <div class="container" style="max-width:880px;text-align:center" data-reveal>
     <span class="eyebrow">Areas we serve</span>
     <h2>Serving Chicago&rsquo;s North Shore.</h2>
-    <p class="pd-inline-links">
-      <a href="<?php echo $baseurl; ?>lakeforest.html">Lake Forest</a>
-      <a href="<?php echo $baseurl; ?>highland.html">Highland Park</a>
-      <a href="<?php echo $baseurl; ?>winnetka.html">Winnetka</a>
-      <a href="<?php echo $baseurl; ?>buffalo_grove.html">Buffalo Grove</a>
-      <a href="<?php echo $baseurl; ?>vernon_hills.html">Vernon Hills</a>
-      <a href="<?php echo $baseurl; ?>chicago.html">Chicago</a>
-    </p>
+    <p>Proudly serving Chicago&rsquo;s North Shore and beyond.</p>
   </div>
 </section>
 

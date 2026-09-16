@@ -7,7 +7,7 @@ $bp_meta_desc  = 'Kährs Swedish-made hardwood flooring, the inventor of enginee
 $bp_canonical  = 'kahrs';
 $bp_brand_name = 'Kährs';
 $bp_eyebrow    = 'Flooring partner';
-$bp_hero_image = BASEURL . 'flash/big/7.png';
+$bp_hero_image = BASEURL . 'flash/big/7.webp';
 $bp_story = [
   'Kährs is the oldest wood floor company in the world. They invented the engineered wood floor in 1941, every other engineered floor on the market is a copy of theirs.',
   'Swedish design, Scandinavian forests, FSC-certified wood. When a client wants a floor that looks like it belongs in an architecture magazine, we specify Kährs.',
@@ -23,9 +23,9 @@ $bp_products = [
   ['name' => 'Sustainable',      'desc' => 'FSC certified. Solar-powered factory.'],
 ];
 $bp_projects = [
-  ['img' => BASEURL.'flash/big/7.png', 'title' => 'Linnea European oak install', 'location' => 'Winnetka, IL'],
-  ['img' => BASEURL.'indexpage/big/1_1.png',      'title' => 'Nouveau smoked oak',           'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'flash/big/6.png',      'title' => 'Da Capo hand-scraped',         'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Linnea European oak install', 'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'indexpage/big/1_1.webp',      'title' => 'Nouveau smoked oak',           'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'flash/big/6.webp',      'title' => 'Da Capo hand-scraped',         'location' => 'Lake Forest, IL'],
 ];
 $bp_current_page = 'countertops';
 include "includes/components/brand_page.php";

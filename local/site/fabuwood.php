@@ -7,7 +7,7 @@ $bp_meta_desc  = 'Fabuwood cabinetry, quality semi-custom cabinets at attainable
 $bp_canonical  = 'fabuwood';
 $bp_brand_name = 'Fabuwood';
 $bp_eyebrow    = 'Cabinetry partner';
-$bp_hero_image = BASEURL . 'flash/big/1.png';
+$bp_hero_image = BASEURL . 'flash/big/1.webp';
 $bp_story = [
   'Fabuwood is the value play. Semi-custom cabinets at a price point that lets us deliver a premium kitchen even when the budget is tight. Made in New Jersey with all-plywood box construction.',
   'We use Fabuwood when the design is great, the materials need to stretch, and the client wants a complete kitchen rather than the most expensive cabinet on the market.',
@@ -23,10 +23,20 @@ $bp_products = [
   ['name' => '5-year warranty',  'desc' => 'On finishes and hardware.'],
 ];
 $bp_projects = [
-  ['img' => BASEURL.'flash/big/1.png', 'title' => 'Galaxy white shaker kitchen', 'location' => 'Buffalo Grove, IL'],
-  ['img' => BASEURL.'indexpage/big/1_2.png',     'title' => 'Onyx contemporary remodel',    'location' => 'Deerfield, IL'],
-  ['img' => BASEURL.'flash/big/4.png', 'title' => 'Quest premium upgrade',        'location' => 'Northbrook, IL'],
+  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Galaxy white shaker kitchen', 'location' => 'Buffalo Grove, IL'],
+  ['img' => BASEURL.'indexpage/big/1_2.webp',     'title' => 'Onyx contemporary remodel',    'location' => 'Deerfield, IL'],
+  ['img' => BASEURL.'flash/big/4.webp', 'title' => 'Quest premium upgrade',        'location' => 'Northbrook, IL'],
 ];
 $bp_current_page = 'kitchens';
+$bp_gallery = [
+  'assets/img/gallery/fabuwood/1.webp',
+  'assets/img/gallery/fabuwood/2.webp',
+  'assets/img/gallery/fabuwood/3.webp',
+  'assets/img/gallery/fabuwood/4.webp',
+  'assets/img/gallery/fabuwood/5.webp',
+  'assets/img/gallery/fabuwood/6.webp',
+  'assets/img/gallery/fabuwood/7.webp',
+  'assets/img/gallery/fabuwood/8.webp',
+];
 include "includes/components/brand_page.php";
 ?>

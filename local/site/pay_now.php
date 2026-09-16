@@ -23,7 +23,7 @@ $phone_raw = $contact['Phone'] ?? '(847) 681-9000';
 
 <?php
   $hero_variant = 'compact';
-  $hero_image = $baseurl . 'flash/big/2.png';
+  $hero_image = $baseurl . 'flash/big/2.webp';
   $hero_eyebrow = 'Pay your invoice';
   $hero_title = 'Secure online payment.';
   $hero_description = 'Pay an invoice or deposit by credit card. Encrypted, processed by our secure payment partner.';

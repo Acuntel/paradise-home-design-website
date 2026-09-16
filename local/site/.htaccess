@@ -2,52 +2,112 @@ RewriteEngine on
 
 RewriteBase /
 
-# Core pages
-RewriteRule index.html?$ index.php
-RewriteRule about.html?$ about.php
-RewriteRule gallery.html?$ gallery.php
-RewriteRule contact.html?$ contact.php
+# --- Canonical host: force HTTPS + www (one 301 hop) ---
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.paradisehomedesigninc.com%{REQUEST_URI} [L,R=301]
 
-# Services (Phase 4)
-RewriteRule kitchens.html?$ kitchens.php
-RewriteRule bathrooms.html?$ bathrooms.php
-RewriteRule counter_tops.html?$ counter_tops.php
+# --- Retire dead legacy scripts: return 410 Gone so search engines drop them ---
+RewriteRule ^(products2?|projects|cart|captcha)\.php$ - [G]
+RewriteRule ^sitemap\.html$ - [G]
+
+# Core pages
+RewriteRule ^index\.html?$ index.php
+RewriteRule ^about\.html?$ about.php
+RewriteRule ^gallery\.html?$ gallery.php
+RewriteRule ^contact\.html?$ contact.php
+
+# Services
+RewriteRule ^kitchens\.html?$ kitchens.php
+RewriteRule ^bathrooms\.html?$ bathrooms.php
+RewriteRule ^counter_tops\.html?$ counter_tops.php
 
 # Brand index
-RewriteRule brands.html?$ brands.php
+RewriteRule ^brands\.html?$ brands.php
 
 # Brand pages
-RewriteRule candlelight.html?$ candlelight.php
-RewriteRule fabuwood.html?$ fabuwood.php
-RewriteRule homecrest.html?$ homecrest.php
-RewriteRule holiday_kitchen.html?$ holiday_kitchen.php
-RewriteRule medallion.html?$ medallion.php
-RewriteRule rdhenry.html?$ rdhenry.php
-RewriteRule woodland.html?$ woodland.php
-RewriteRule mercier.html?$ mercier.php
-RewriteRule mirage.html?$ mirage.php
-RewriteRule kahrs.html?$ kahrs.php
-RewriteRule casebella.html?$ casebella.php
-RewriteRule florida.html?$ florida.php
-RewriteRule richelieu.html?$ richelieu.php
-RewriteRule schaub.html?$ schaub.php
+RewriteRule ^adelphi\.html?$ adelphi.php
+RewriteRule ^qcci\.html?$ qcci.php
+RewriteRule ^candlelight\.(html?|php)$ https://www.paradisehomedesigninc.com/brands.html [R=301,L]
+RewriteRule ^fabuwood\.html?$ fabuwood.php
+RewriteRule ^homecrest\.html?$ homecrest.php
+RewriteRule ^holiday_kitchen\.html?$ holiday_kitchen.php
+RewriteRule ^medallion\.(html?|php)$ https://www.paradisehomedesigninc.com/brands.html [R=301,L]
+# Retired cabinetry brands (no longer carried) — 301 to the brands page
+RewriteRule ^rdhenry\.(html?|php)$ https://www.paradisehomedesigninc.com/brands.html [R=301,L]
+RewriteRule ^woodland\.(html?|php)$ https://www.paradisehomedesigninc.com/brands.html [R=301,L]
+RewriteRule ^mercier\.html?$ mercier.php
+RewriteRule ^mirage\.html?$ mirage.php
+RewriteRule ^kahrs\.html?$ kahrs.php
+RewriteRule ^casebella\.html?$ casebella.php
+RewriteRule ^florida\.html?$ florida.php
+RewriteRule ^richelieu\.html?$ richelieu.php
+RewriteRule ^schaub\.html?$ schaub.php
+RewriteRule ^top_knobs\.html?$ top_knobs.php
 
 # Showroom / consultation / payment / thanks
-RewriteRule showroom.html?$ showroom.php
-RewriteRule design_consultation.html?$ design_consultation.php
-RewriteRule pay_now.html?$ pay_now.php
-RewriteRule thankyou.html?$ thankyou.php
+RewriteRule ^showroom\.html?$ showroom.php
+RewriteRule ^design_consultation\.html?$ design_consultation.php
+RewriteRule ^pay_now\.html?$ pay_now.php
+RewriteRule ^thankyou\.html?$ thankyou.php
 
 # City landing pages
-RewriteRule highland.html?$ highland.php
-RewriteRule lakeforest.html?$ lakeforest.php
-RewriteRule winnetka.html?$ winnetka.php
-RewriteRule chicago.html?$ chicago.php
-RewriteRule buffalo_grove.html?$ buffalo_grove.php
-RewriteRule vernon_hills.html?$ vernon_hills.php
+RewriteRule ^highland\.html?$ highland.php
+RewriteRule ^lakeforest\.html?$ lakeforest.php
+RewriteRule ^winnetka\.html?$ winnetka.php
+RewriteRule ^chicago\.html?$ chicago.php
+RewriteRule ^buffalo_grove\.html?$ buffalo_grove.php
+RewriteRule ^vernon_hills\.html?$ vernon_hills.php
 
-# Legacy products page
-RewriteRule products.html?$ products.php
+# Blog
+RewriteRule ^blog\.html?$ blog.php
+RewriteRule ^blog-kitchen-remodel-cost\.html?$ blog-kitchen-remodel-cost.php
+RewriteRule ^blog-kitchen-trends-2026\.html?$ blog-kitchen-trends-2026.php
+RewriteRule ^blog-custom-vs-semi-custom-cabinets\.html?$ blog-custom-vs-semi-custom-cabinets.php
+RewriteRule ^blog-bathroom-remodel-guide\.html?$ blog-bathroom-remodel-guide.php
 
-# Catch-all for category URLs (e.g. /cabinets/ -> products.php?ctab=cabinets)
-RewriteRule ^(.+)/$ products.php?ctab=$1 [L]
+
+# New local landing pages (town hubs + town x service)
+RewriteRule ^glencoe\.html?$ glencoe.php
+RewriteRule ^northbrook\.html?$ northbrook.php
+RewriteRule ^deerfield\.html?$ deerfield.php
+RewriteRule ^lake_bluff\.html?$ lake_bluff.php
+RewriteRule ^highwood\.html?$ highwood.php
+RewriteRule ^kitchen-remodeling-lake-forest\.html?$ kitchen-remodeling-lake-forest.php
+RewriteRule ^kitchen-remodeling-highland-park\.html?$ kitchen-remodeling-highland-park.php
+RewriteRule ^kitchen-remodeling-winnetka\.html?$ kitchen-remodeling-winnetka.php
+RewriteRule ^kitchen-remodeling-glencoe\.html?$ kitchen-remodeling-glencoe.php
+RewriteRule ^kitchen-remodeling-northbrook\.html?$ kitchen-remodeling-northbrook.php
+RewriteRule ^bathroom-remodeling-lake-forest\.html?$ bathroom-remodeling-lake-forest.php
+RewriteRule ^bathroom-remodeling-highland-park\.html?$ bathroom-remodeling-highland-park.php
+RewriteRule ^bathroom-remodeling-winnetka\.html?$ bathroom-remodeling-winnetka.php
+
+
+# Guide pages
+RewriteRule ^permit-guide\.html?$ permit-guide.php
+RewriteRule ^remodel-timeline\.html?$ remodel-timeline.php
+RewriteRule ^financing\.html?$ financing.php
+
+# NOTE: the old "RewriteRule ^(.+)/$ products.php?ctab=$1 [L]" catch-all was REMOVED.
+# It turned any /anything/ URL into a 200-status, empty-title duplicate of products.php,
+# leaking crawl budget and ranking authority. Unknown URLs now correctly 404.
+
+# Branded 404
+ErrorDocument 404 /404.php
+
+# --- Compression (shrinks every HTML/CSS/JS response ~70%) ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json application/ld+json image/svg+xml text/xml
+</IfModule>
+
+# --- Long-cache static assets ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>

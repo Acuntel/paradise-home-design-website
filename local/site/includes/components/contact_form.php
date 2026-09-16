@@ -5,6 +5,8 @@
 $baseurl = defined('BASEURL') ? BASEURL : '/';
 ?>
 <form class="pd-form" action="<?php echo $baseurl; ?>contactmail.php" method="post" data-reveal>
+  <!-- Honeypot: hidden from humans; bots fill it and get rejected. -->
+  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
   <div>
     <label for="cf-name">Name</label>
     <input id="cf-name" type="text" name="name" required autocomplete="name">

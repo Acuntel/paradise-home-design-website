@@ -1,13 +1,38 @@
 <?php
 /**
- * Paradise design-consultation form handler.
+ * Paradise design-consultation form handler (posts from design_consultation.php).
  *
- * Sends every consultation request to:
- *   - paradisehd400@gmail.com  (Paradise owner inbox)
- *   - bradyschwartz25@gmail.com (Brady, for tracking)
- *   - 8472122142@txt.att.net   (Brady's SMS via AT&T email-to-SMS gateway)
+ * Mirrors contactmail.php on purpose: EVERY lead is (1) backed up to leads/leads.csv
+ * (the dashboard + spreadsheet) and (2) emailed to Brady + Paradise via the shared
+ * notifier (FormSubmit/HTTP relay) — NOT raw mail(), which GoDaddy sends unauthenticated
+ * and Gmail silently drops (no SPF/DKIM). That mail() path is exactly why earlier
+ * consultation requests arrived blank / never arrived at all.
  */
 ob_start();
+require_once __DIR__ . '/includes/lead_notify.php';
+
+$ip = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? '';
+
+// ---- Oversized-upload guard ----
+// If a POST arrived but PHP wiped $_POST/$_FILES because the body exceeded
+// post_max_size (a visitor attaching a big photo/PDF), every field is blank.
+// Record a flagged row so the attempt is VISIBLE in the dashboard instead of
+// arriving as a silent blank "unknown" email we can never follow up on.
+$is_post     = ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST';
+$content_len = (int) ($_SERVER['CONTENT_LENGTH'] ?? 0);
+if ($is_post && empty($_POST) && $content_len > 0) {
+  pd_log_lead([
+    'time' => date('Y-m-d H:i:s T'),
+    'type' => 'Design consultation (UPLOAD TOO LARGE — fields lost)',
+    'name' => '', 'email' => '', 'phone' => '', 'project' => '', 'timeline' => '',
+    'message' => 'Submission body (' . $content_len . ' bytes) exceeded the server upload limit, '
+               . 'so PHP discarded all fields. Visitor likely attached a large photo/PDF and could '
+               . 'not be captured — they should resubmit with a smaller file or email photos separately.',
+    'page' => 'design_consultation', 'ip' => $ip,
+  ]);
+  header('Location: thankyou.html');
+  exit;
+}
 
 $first       = trim($_POST['firstname']     ?? '');
 $last        = trim($_POST['lastname']      ?? '');
@@ -15,49 +40,85 @@ $email       = trim($_POST['email']         ?? '');
 $phone       = trim($_POST['phone']         ?? '');
 $preferred   = trim($_POST['preferredtime'] ?? '');
 $helpyou     = trim($_POST['helpyou']       ?? $_POST['services'] ?? '');
-$description = trim($_POST['description']   ?? $_POST['comments'] ?? '');
+$description = trim($_POST['description']    ?? $_POST['comments'] ?? '');
 
 foreach (['first', 'last', 'email', 'phone', 'preferred', 'helpyou'] as $k) {
   $$k = preg_replace('/[\r\n]+/', ' ', $$k);
 }
 $name = trim($first . ' ' . $last);
 
-$paradise_inbox = 'paradisehd400@gmail.com';
-$brady_inbox    = 'bradyschwartz25@gmail.com';
-$brady_sms      = '8472122142@txt.att.net';
+// ---- Bot / spam guard ----
+// Honeypot: real users never fill the hidden _gotcha field; bots do.
+if (!empty($_POST['_gotcha'])) { header('Location: thankyou.html'); exit; }
+// The real form always carries this shared secret; empty bot POSTs to this
+// endpoint don't, which is what produced the blank "unknown" emails.
+if (($_POST['captcha'] ?? '') !== 'paradise2024') { header('Location: thankyou.html'); exit; }
+// Require a name AND at least one way to reach them, so the owner never gets a
+// blank lead they can't call or text.
+if ($name === '' || ($email === '' && $phone === '')) { header('Location: thankyou.html'); exit; }
 
-/* ---------- 1) Full HTML email ---------- */
-$emailSubject = 'Paradise CONSULTATION request: ' . ($name ?: 'unknown') . ($helpyou ? ' — ' . $helpyou : '');
+// ---- Rate limiting ----
+if (pd_lead_flood()) { header('Location: thankyou.html'); exit; }
+$skip_email = pd_lead_email_throttled();
 
-$htmlBody = '<h2 style="font-family:sans-serif;background:#B58C45;color:#0E1A11;padding:1rem 1.25rem;margin:0">Paradise – consultation request</h2>
-<table style="font-family:sans-serif;font-size:15px;border-collapse:collapse;margin-top:1rem" cellpadding="8">
-  <tr><td style="font-weight:bold;width:140px">Name</td><td>' . htmlspecialchars($name) . '</td></tr>
-  <tr><td style="font-weight:bold">Email</td><td><a href="mailto:' . htmlspecialchars($email) . '">' . htmlspecialchars($email) . '</a></td></tr>
-  <tr><td style="font-weight:bold">Phone</td><td><a href="tel:' . htmlspecialchars($phone) . '">' . htmlspecialchars($phone) . '</a></td></tr>
-  <tr><td style="font-weight:bold">Preferred time</td><td>' . htmlspecialchars($preferred) . '</td></tr>
-  <tr><td style="font-weight:bold">Project</td><td>' . htmlspecialchars($helpyou) . '</td></tr>
-  <tr><td style="font-weight:bold;vertical-align:top">Description</td><td>' . nl2br(htmlspecialchars($description)) . '</td></tr>
-  <tr><td style="font-weight:bold">Submitted</td><td>' . date('M j, Y g:i a T') . '</td></tr>
-  <tr><td style="font-weight:bold">Source</td><td>paradisehomedesigninc.com /design_consultation</td></tr>
-</table>';
+// Save any uploaded photo / plans to a protected web folder and get a link.
+// The form sends the photo as base64 in a url-encoded post (the Sucuri WAF
+// corrupts multipart file uploads); $_FILES is a legacy fallback. Photos are
+// strictly best-effort — a missing/oversized/bad photo never blocks the lead.
+$upload = null;
+if (!empty($_POST['attach_b64'])) {
+  $upload = pd_save_lead_upload_b64($_POST['attach_b64'], $_POST['attach_name'] ?? '');
+} elseif (!empty($_FILES['attach']['name'])) {
+  $upload = pd_save_lead_upload('attach');
+}
+$attach_name = $upload['name'] ?? trim((string) ($_POST['attach_name'] ?? ($_FILES['attach']['name'] ?? '')));
+$attach_url  = $upload['url']  ?? '';
+if ($attach_url) {
+  $attach_note = "  |  Photo/plans: " . $attach_name . " — " . $attach_url;
+} elseif ($attach_name) {
+  $attach_note = "  |  Attachment '" . $attach_name . "' was NOT saved (unsupported type or over the size limit)";
+} else {
+  $attach_note = '';
+}
 
-$senderAddr = $email && filter_var($email, FILTER_VALIDATE_EMAIL) ? $email : 'noreply@paradisehomedesigninc.com';
-$headers  = "MIME-Version: 1.0\r\n";
-$headers .= "Content-type: text/html; charset=UTF-8\r\n";
-$headers .= "From: Paradise Website <noreply@paradisehomedesigninc.com>\r\n";
-$headers .= "Reply-To: " . $senderAddr . "\r\n";
-$headers .= "Cc: " . $brady_inbox . "\r\n";
+// 1) Permanent backup to CSV (dashboard + spreadsheet)
+pd_log_lead([
+  'time' => date('Y-m-d H:i:s T'), 'type' => 'Design consultation',
+  'name' => $name, 'email' => $email, 'phone' => $phone,
+  'project' => $helpyou, 'timeline' => $preferred,
+  'message' => $description . $attach_note,
+  'page' => 'design_consultation', 'ip' => $ip,
+]);
 
-mail($paradise_inbox, $emailSubject, $htmlBody, $headers);
+// 2) Reliable email to Brady + Paradise (same delivery path as the contact form)
+if (!$skip_email) {
+  $fields = [
+    'Lead type'      => 'Design consultation',
+    'Name'           => $name,
+    'Email'          => $email,
+    'Phone'          => $phone,
+    'Preferred time' => $preferred,
+    'Project'        => $helpyou,
+    'Description'    => $description,
+    'Submitted'      => date('M j, Y g:i a T'),
+    'Source'         => 'paradisehomedesigninc.com/design_consultation',
+  ];
+  if ($attach_url) {
+    $fields['Photo / plans'] = $attach_name . ' — ' . $attach_url;
+  } elseif ($attach_name) {
+    $fields['Photo / plans'] = $attach_name . ' (not saved — unsupported type or too large)';
+  }
+  pd_send_lead_email(
+    'Paradise consultation request: ' . ($name ?: 'unknown') . ($helpyou ? ' — ' . $helpyou : ''),
+    $fields
+  );
+}
 
-/* ---------- 2) SMS to Brady ---------- */
-$sms = 'Paradise CONSULTATION: ' . $name . ' / ' . $phone . ($helpyou ? ' / ' . $helpyou : '');
-if (strlen($sms) > 155) $sms = substr($sms, 0, 152) . '...';
-
-$smsHeaders  = "MIME-Version: 1.0\r\n";
-$smsHeaders .= "Content-Type: text/plain; charset=UTF-8\r\n";
-$smsHeaders .= "From: paradise@paradisehomedesigninc.com\r\n";
-mail($brady_sms, 'Paradise consultation', $sms, $smsHeaders);
+// 3) Best-effort SMS to Brady (AT&T email-to-SMS gateway — unreliable, never relied on).
+$sms = 'Paradise CONSULT: ' . $name . ' / ' . ($phone ?: $email) . ($helpyou ? ' / ' . $helpyou : '');
+if (strlen($sms) > 155) { $sms = substr($sms, 0, 152) . '...'; }
+@mail('8472122142@txt.att.net', 'Paradise consultation', $sms,
+  "From: paradise@paradisehomedesigninc.com\r\nContent-Type: text/plain; charset=UTF-8\r\n");
 
 header('Location: thankyou.html');
 exit;

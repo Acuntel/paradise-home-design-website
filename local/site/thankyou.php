@@ -37,5 +37,9 @@ $phone_raw = $contact['Phone'] ?? '(847) 681-9000';
 
 <?php include_once("includes/components/site_footer.php"); ?>
 
+<!-- GA4 conversion: a lead was captured (the contact form redirects here on success) -->
+<script>
+  if (typeof gtag === 'function') { gtag('event', 'generate_lead', { value: 15000, currency: 'USD' }); }
+</script>
 </body>
 </html>

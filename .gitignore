@@ -18,3 +18,29 @@ backups/
 
 # Logs
 *.log
+
+# --- Added 2026-09-15 while committing the ~99-file drift ---
+# Real customer leads. Names, phone numbers and addresses. Never commit these.
+local/site/leads/
+
+# Working artifacts, not site source: timestamped live pulls, extraction dumps,
+# client photo drops and converted image batches. Tens of MB, regenerable.
+local/live/
+local/live-pull-*/
+local/og/
+local/og-export/
+local/webp/
+local/legacy/
+local/final-round-*/
+local/homepage-photos-*/
+local/.final_round_ts
+
+# Server-generated PHP handler config, not ours to version.
+local/site/.user.ini
+
+# Site image assets live on the server (the 17 GB tree is never fully mirrored,
+# see CLAUDE.md). Keeping them out of git keeps this repo a code+docs snapshot.
+local/site/flash/
+local/site/highland4/
+local/site/lakeforest2/
+local/site/vernonhills1/

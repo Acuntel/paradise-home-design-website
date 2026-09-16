@@ -7,7 +7,7 @@ $bp_meta_desc  = 'Woodland Cabinetry, family-owned custom cabinets from Sisseton
 $bp_canonical  = 'woodland';
 $bp_brand_name = 'Woodland';
 $bp_eyebrow    = 'Cabinetry partner';
-$bp_hero_image = BASEURL . 'flash/big/1.png';
+$bp_hero_image = BASEURL . 'flash/big/1.webp';
 $bp_story = [
   'Woodland Cabinetry has been operating in Sisseton, South Dakota for more than 20 years. Family-owned, small-town employer, not a corporate manufacturer driven by stock performance.',
   'We use Woodland when clients want affordable custom cabinetry, real wood, low-VOC finishes, and a story they can tell about who built it. Lead times are reliable and the price-to-quality is hard to match.',
@@ -23,10 +23,20 @@ $bp_products = [
   ['name' => 'Lifetime warranty',  'desc' => 'On boxes and hardware.'],
 ];
 $bp_projects = [
-  ['img' => BASEURL.'flash/big/1.png', 'title' => 'Painted shaker family kitchen', 'location' => 'Buffalo Grove, IL'],
-  ['img' => BASEURL.'flash/big/5.png', 'title' => 'White shaker island',           'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'flash/big/4.png', 'title' => 'Bath vanity remodel',           'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Painted shaker family kitchen', 'location' => 'Buffalo Grove, IL'],
+  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White shaker island',           'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'flash/big/4.webp', 'title' => 'Bath vanity remodel',           'location' => 'Highland Park, IL'],
 ];
 $bp_current_page = 'kitchens';
+$bp_gallery = [
+  'assets/img/gallery/woodland/1.webp',
+  'assets/img/gallery/woodland/2.webp',
+  'assets/img/gallery/woodland/3.webp',
+  'assets/img/gallery/woodland/4.webp',
+  'assets/img/gallery/woodland/5.webp',
+  'assets/img/gallery/woodland/6.webp',
+  'assets/img/gallery/woodland/7.webp',
+  'assets/img/gallery/woodland/8.webp',
+];
 include "includes/components/brand_page.php";
 ?>

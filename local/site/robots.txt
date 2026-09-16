@@ -1,0 +1,25 @@
+# Paradise Home Design Inc — robots.txt
+User-agent: *
+Allow: /
+Disallow: /dashboard/
+Disallow: /designuploads/
+
+# AI assistants & answer engines — explicitly welcome (AEO)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://www.paradisehomedesigninc.com/sitemap.xml

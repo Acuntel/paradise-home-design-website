@@ -7,7 +7,7 @@ $bp_meta_desc  = 'Mercier hardwood flooring, Canadian-made engineered and solid 
 $bp_canonical  = 'mercier';
 $bp_brand_name = 'Mercier Wood';
 $bp_eyebrow    = 'Flooring partner';
-$bp_hero_image = BASEURL . 'flash/big/1.png';
+$bp_hero_image = BASEURL . 'flash/big/1.webp';
 $bp_story = [
   'Mercier has been making hardwood floors in Quebec since 1980. They run one of the most advanced wood-finishing operations in North America, UV-cured Generations finish is harder than what comes off most factory floors.',
   'We specify Mercier when we want a real-wood floor that handles a kitchen, moisture from cooking, scratches from chairs, foot traffic from a real family.',
@@ -23,10 +23,15 @@ $bp_products = [
   ['name' => 'Custom stains',    'desc' => '200+ available. Match anything.'],
 ];
 $bp_projects = [
-  ['img' => BASEURL.'flash/big/1.png', 'title' => 'Wide-plank white oak kitchen', 'location' => 'Winnetka, IL'],
-  ['img' => BASEURL.'indexpage/big/1_1.png',      'title' => 'Stained walnut floor',          'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'flash/big/5.png', 'title' => 'Red oak refinish',              'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Wide-plank white oak kitchen', 'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'indexpage/big/1_1.webp',      'title' => 'Stained walnut floor',          'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'Red oak refinish',              'location' => 'Highland Park, IL'],
 ];
 $bp_current_page = 'countertops';
+$bp_gallery = [
+  'assets/img/gallery/mercier/1.webp',
+  'assets/img/gallery/mercier/2.webp',
+  'assets/img/gallery/mercier/3.webp',
+];
 include "includes/components/brand_page.php";
 ?>

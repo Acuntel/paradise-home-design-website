@@ -25,7 +25,7 @@ $phone_raw = $contact['Phone'] ?? '(847) 681-9000';
 
 <?php
   $hero_variant = 'compact';
-  $hero_image = $baseurl . 'flash/big/5.png';
+  $hero_image = $baseurl . 'flash/big/5.webp';
   $hero_eyebrow = 'Free design consultation';
   $hero_title = 'A conversation, not a sales pitch.';
   $hero_description = 'We come to your home or you come to the showroom. Either way, no charge, no obligation.';
@@ -53,7 +53,9 @@ $phone_raw = $contact['Phone'] ?? '(847) 681-9000';
       <div data-reveal>
         <span class="eyebrow">Book a consultation</span>
         <h2>Tell us about your project.</h2>
-        <form class="pd-form mt-3" action="<?php echo $baseurl; ?>appointmail.php" method="post" enctype="multipart/form-data">
+        <form id="dc-form" class="pd-form mt-3" action="<?php echo $baseurl; ?>appointmail.php" method="post">
+          <!-- Honeypot: hidden from humans; bots fill it and get rejected. -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
           <div class="pd-grid pd-grid-2">
             <div>
               <label for="dc-first">First name</label>
@@ -100,13 +102,51 @@ $phone_raw = $contact['Phone'] ?? '(847) 681-9000';
             <textarea id="dc-desc" name="description" rows="4" placeholder="Rooms, rough timeline, anything specific..."></textarea>
           </div>
           <div>
-            <label for="dc-attach">Photos or plans (optional)</label>
-            <input id="dc-attach" type="file" name="attach" accept="image/*,application/pdf" style="border:none;padding:0">
+            <label for="dc-attach">Photos or plans (optional, up to 12&nbsp;MB)</label>
+            <!-- No `name`: the file never posts directly. The Sucuri WAF corrupts
+                 multipart uploads, so JS reads it and sends it as base64 text below. -->
+            <input id="dc-attach" type="file" accept="image/*,application/pdf" style="border:none;padding:0">
+            <p id="dc-attach-msg" class="small" style="color:var(--paradise-stone-500);margin-top:.35rem;display:none"></p>
           </div>
           <input type="hidden" name="captcha" value="paradise2024">
-          <button class="btn btn-primary" type="submit">Request consultation</button>
+          <input type="hidden" name="attach_name" id="dc-attach-name">
+          <input type="hidden" name="attach_b64" id="dc-attach-b64">
+          <button class="btn btn-primary" type="submit" id="dc-submit">Request consultation</button>
           <p class="small" style="color:var(--paradise-stone-500);margin-top:.5rem">No spam. No high-pressure follow-up. We respond within one business day.</p>
         </form>
+        <script>
+        (function(){
+          var form = document.getElementById('dc-form');
+          var file = document.getElementById('dc-attach');
+          var nameF = document.getElementById('dc-attach-name');
+          var b64F = document.getElementById('dc-attach-b64');
+          var msg = document.getElementById('dc-attach-msg');
+          var btn = document.getElementById('dc-submit');
+          if (!form || !file) { return; }
+          var MAX = 12 * 1024 * 1024;       // 12 MB cap (base64 stays well under the 64M post limit)
+          var note = function(t){ if (msg){ msg.textContent = t; msg.style.display = t ? 'block' : 'none'; } };
+          file.addEventListener('change', function(){
+            b64F.value = ''; nameF.value = '';
+            var f = file.files && file.files[0];
+            if (f && f.size > MAX) { note('That file is over 12 MB — submit your request and we’ll ask for photos by email.'); }
+            else { note(f ? ('Attached: ' + f.name) : ''); }
+          });
+          form.addEventListener('submit', function(e){
+            var f = file.files && file.files[0];
+            // Nothing to attach, too big, or already encoded -> submit as normal text.
+            if (!f || f.size > MAX || b64F.value) { return; }
+            e.preventDefault();
+            btn.disabled = true; var label = btn.textContent; btn.textContent = 'Uploading photo…';
+            var done = function(){ btn.disabled = false; btn.textContent = label; form.submit(); };
+            try {
+              var reader = new FileReader();
+              reader.onload = function(){ b64F.value = reader.result || ''; nameF.value = f.name; done(); };
+              reader.onerror = function(){ b64F.value = ''; nameF.value = ''; done(); }; // photo failed -> still send the lead
+              reader.readAsDataURL(f);
+            } catch (err) { b64F.value = ''; nameF.value = ''; done(); }
+          });
+        })();
+        </script>
       </div>
     </div>
   </div>

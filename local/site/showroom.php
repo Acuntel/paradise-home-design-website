@@ -13,10 +13,10 @@ $address = $contact['Address'] ?? '225 E Deerpath Rd, Unit #80, Lake Forest, IL 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Showroom · Lake Forest, IL · Paradise Home Design</title>
-<meta name="description" content="Visit the Paradise Home Design showroom at 225 E Deerpath Rd in Lake Forest, IL. Cabinet samples, slab counters, hardwood, and tile on display.">
+<meta name="description" content="Visit the Paradise Home Design showroom at 225 E Deerpath Rd in Lake Forest, IL. Cabinet samples, stone samples, hardwood, and tile on display.">
 <link rel="canonical" href="https://www.paradisehomedesigninc.com/showroom.html" />
 <meta property="og:title" content="Paradise Home Design Showroom" />
-<meta property="og:image" content="https://www.paradisehomedesigninc.com<?php echo $baseurl; ?>flash/big/3.png" />
+<meta property="og:image" content="https://www.paradisehomedesigninc.com<?php echo $baseurl; ?>showroom1/big/storefront1.webp" />
 <meta name="robots" content="index, follow"/>
 <link rel="shortcut icon" href="<?php echo $baseurl; ?>assets/img/favicon.png">
 <?php include_once("includes/headtags.php"); ?>
@@ -27,10 +27,10 @@ $address = $contact['Address'] ?? '225 E Deerpath Rd, Unit #80, Lake Forest, IL 
 
 <?php
   $hero_variant = 'compact';
-  $hero_image = $baseurl . 'flash/big/3.png';
+  $hero_image = $baseurl . 'flash/big/3.webp';
   $hero_eyebrow = 'Visit the showroom';
-  $hero_title = 'Touch the samples before you sign anything.';
-  $hero_description = 'Cabinet doors, slab counters, hardwood, and tile, all under one roof in Lake Forest.';
+  $hero_title = 'Compare finishes, textures, and materials in person.';
+  $hero_description = 'Cabinetry, countertops, hardwood, and tile—all thoughtfully displayed in our Lake Forest showroom.';
   $hero_preloader = false;
   $hero_show_scroll = false;
   include "includes/components/hero.php";
@@ -38,40 +38,14 @@ $address = $contact['Address'] ?? '225 E Deerpath Rd, Unit #80, Lake Forest, IL 
 
 <!-- What's on display -->
 <section>
-  <div class="container">
-    <?php
-      $sh_eyebrow = 'On display';
-      $sh_heading = 'Real samples, not catalog photos.';
-      $sh_description = 'Bring paint swatches, fabric samples, and a list of what you don\'t want. Coffee\'s on us.';
-      $sh_centered = true;
-      include "includes/components/section_header.php";
-    ?>
-    <div class="pd-grid pd-grid-4">
-      <div class="card" data-reveal>
-        <div class="card-body">
-          <h4 style="font-family:var(--font-display);font-size:1.25rem;font-weight:500">Cabinet doors</h4>
-          <p class="small">Sample doors from every brand we carry: Candlelight, Fabuwood, Homecrest, Holiday Kitchens, Medallion, R.D. Henry, Woodland.</p>
-        </div>
-      </div>
-      <div class="card" data-reveal>
-        <div class="card-body">
-          <h4 style="font-family:var(--font-display);font-size:1.25rem;font-weight:500">Stone slabs</h4>
-          <p class="small">Quartz, quartzite, marble, and granite sections leaning against the wall. See how the veining actually flows.</p>
-        </div>
-      </div>
-      <div class="card" data-reveal>
-        <div class="card-body">
-          <h4 style="font-family:var(--font-display);font-size:1.25rem;font-weight:500">Hardwood floors</h4>
-          <p class="small">Plank samples from Mercier, Mirage, Kährs, and Casabella. Different species, widths, and finishes.</p>
-        </div>
-      </div>
-      <div class="card" data-reveal>
-        <div class="card-body">
-          <h4 style="font-family:var(--font-display);font-size:1.25rem;font-weight:500">Hardware + tile</h4>
-          <p class="small">Knobs, pulls, hinges from Richelieu and Schaub. Florida Tile samples for backsplash and bath.</p>
-        </div>
-      </div>
-    </div>
+  <div class="container" style="max-width:820px;text-align:center" data-reveal>
+    <span class="eyebrow">On display</span>
+    <h2>Everything under one roof.</h2>
+    <p class="lead">Our Lake Forest showroom brings together cabinet door samples, stone samples, hardwood planks, tile, and decorative hardware from the brands we carry&mdash;so you can see and compare real materials side by side before you decide. Bring your paint swatches and inspiration, and a list of what you don&rsquo;t want.</p>
+    <!-- Showroom storefront photo (client "Showroom Picture 1", 2026-09-02) -->
+    <button type="button" class="pd-feature-image mt-5" data-lightbox="<?php echo $baseurl; ?>showroom1/big/storefront1.webp" data-reveal aria-label="Enlarge showroom photo">
+      <img src="<?php echo $baseurl; ?>showroom1/big/storefront1.webp" alt="Paradise Home Design showroom storefront, 225 E Deerpath Rd, Lake Forest" loading="lazy">
+    </button>
   </div>
 </section>
 
@@ -84,7 +58,7 @@ $address = $contact['Address'] ?? '225 E Deerpath Rd, Unit #80, Lake Forest, IL 
         <h2>225 East Deerpath Road.</h2>
         <p class="mt-3"><strong>Address</strong><br><?php echo htmlspecialchars($address); ?></p>
         <p class="mt-3"><strong>Phone</strong><br><a href="tel:+1<?php echo preg_replace('/\D/', '', $phone_raw); ?>" style="color:var(--paradise-brass-500);font-family:var(--font-display);font-size:1.5rem"><?php echo htmlspecialchars($phone_raw); ?></a></p>
-        <p class="mt-3"><strong>Hours</strong><br>Monday to Friday: 9am to 5pm<br>Saturday: by appointment<br>Sunday: closed</p>
+        <p class="mt-3"><strong>Hours</strong><br>Monday to Friday: 10am to 5pm<br>Saturday: by appointment<br>Sunday: closed</p>
         <p class="mt-3"><strong>Parking</strong><br>Street parking out front. Unit #80 is on the east side of the building.</p>
         <div class="mt-4">
           <a class="btn btn-primary" href="<?php echo $baseurl; ?>design_consultation.html">Book a consultation</a>

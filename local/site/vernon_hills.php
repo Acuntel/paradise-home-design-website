@@ -8,13 +8,16 @@ $cp_city_name = 'Vernon Hills';
 $cp_hero_image = BASEURL . 'flash/big/7.webp';
 $cp_zip_codes = ['60061'];
 $cp_neighborhoods = ['Greggs Landing', 'New Century Town', 'Centennial Crossings'];
+// 2026-09-24: shared stock photos carry NO town label; only photos really from this town get one.
+$cp_projects_eyebrow = 'Recent work';
+$cp_projects_heading = 'Kitchens and baths we\'ve designed.';
 $cp_projects = [
-  ['img' => BASEURL.'lakeforest/big/7_1.webp', 'title' => 'Spa primary bath', 'location' => 'Vernon Hills, IL'],
-  ['img' => BASEURL.'flash/big/6.webp', 'title' => 'Family kitchen refresh', 'location' => 'Vernon Hills, IL'],
-  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Hardwood + tile remodel', 'location' => 'Vernon Hills, IL'],
-  ['img' => BASEURL.'flash/big/2.webp', 'title' => 'Black + brass kitchen', 'location' => 'Vernon Hills, IL'],
-  ['img' => BASEURL.'flash/big/3.webp', 'title' => 'Built-in gray cabinetry', 'location' => 'Vernon Hills, IL'],
-  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White shaker kitchen', 'location' => 'Vernon Hills, IL'],
+  ['img' => BASEURL.'vernonhills1/big/bath-main.webp', 'title' => 'Warm wood double vanity, brass fixtures', 'location' => 'Vernon Hills, IL'],
+  ['img' => BASEURL.'vernonhills1/big/after2.webp', 'title' => 'Walk-in shower, black hexagon floor', 'location' => 'Vernon Hills, IL'],
+  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White kitchen, oversized island', 'location' => ''],
+  ['img' => BASEURL.'flash/big/2.webp', 'title' => 'Black cabinets, marble, brass', 'location' => ''],
+  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => ''],
+  ['img' => BASEURL.'indexpage/big/1_1.webp', 'title' => 'White galley kitchen, hardwood', 'location' => ''],
 ];
 $cp_reasons = [
   ['title' => 'We know the housing stock.', 'body' => 'Over 37 years working Vernon Hills homes — we know the Greggs Landing and New Century Town subdivisions, and the load-bearing tells. No surprises mid-project.'],

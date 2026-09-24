@@ -26,10 +26,11 @@ $faqs = [
   ['q' => 'Do you design the kitchen as well as build it?', 'a' => 'Yes. Paradise Home Design is a true design-build firm with an in-house design team, so the same office that draws your Lake Forest kitchen also frames, wires, and installs it. That keeps the cabinet layout, the structural changes, and the final build aligned, with one accountable team rather than a designer and a contractor pointing at each other.'],
   ['q' => 'How do I get started on a Lake Forest kitchen remodel?', 'a' => 'Call (847) 681-9000 or request a consultation through our site. We respond within one business day, walk your kitchen, talk through cabinetry and countertops at our Lake Forest showroom, and provide a written estimate before any work begins.'],
 ];
+// 2026-09-24: shared stock photos carry NO town label; only photos really from this town get one.
 $ts_projects = [
-  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White shaker kitchen, brass accents', 'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Blue island, subway tile', 'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest2/big/kitchen4.webp', 'title' => 'White shaker, open shelving', 'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest2/big/post4.webp', 'title' => 'Quartzite counters, stainless hood', 'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest2/big/kitchen3.webp', 'title' => 'Quartzite backsplash, workstation sink', 'location' => 'Lake Forest, IL'],
 ];
 include "includes/components/ts_page.php";
 ?>

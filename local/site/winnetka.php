@@ -11,9 +11,9 @@ $cp_neighborhoods = ['Hubbard Woods', 'East Winnetka', 'Indian Hill'];
 $cp_projects = [
   ['img' => BASEURL.'winnetka/big/3.webp',  'title' => 'White shaker galley',             'location' => 'Winnetka, IL'],
   ['img' => BASEURL.'winnetka/big/6.webp',  'title' => 'Open white island kitchen',       'location' => 'Winnetka, IL'],
-  ['img' => BASEURL.'winnetka/big/8.webp',  'title' => 'White kitchen + brass island',    'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'winnetka/big/8.webp',  'title' => 'White kitchen, gray island', 'location' => 'Winnetka, IL'],
   ['img' => BASEURL.'winnetka/big/9.webp',  'title' => 'Gas cooktop on quartz',           'location' => 'Winnetka, IL'],
-  ['img' => BASEURL.'winnetka/big/12.webp', 'title' => 'Marble island + brass faucet',    'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'winnetka/big/12.webp', 'title' => 'Marble island, polished nickel faucet', 'location' => 'Winnetka, IL'],
   ['img' => BASEURL.'winnetka/big/14.webp', 'title' => 'Custom Winnetka kitchen',         'location' => 'Winnetka, IL'],
 ];
 $cp_reasons = [

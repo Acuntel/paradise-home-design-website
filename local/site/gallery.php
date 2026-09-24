@@ -175,12 +175,12 @@ $baseurl = BASEURL;
     [
       'name' => 'Lake Forest Bathroom Project',
       'tag'  => 'Bathroom Remodel',
-      'meta' => 'Lake Forest, IL · Custom vanities',
+      'meta' => 'Lake Forest, IL · Before & after',
       'paras' => [
-        "Two refreshed baths from the same Lake Forest home: custom vanities with double sinks, a tiled walk-in shower, and a vessel-sink vanity finished with a sliding barn-door mirror.",
+        "A dated tub bathroom with teal tile, transformed into a bright, modern space with a tiled walk-in shower, a custom double-sink vanity, and new large-format floor tile. The last photo shows the space before the remodel.",
       ],
       'bullets' => [],
-      'images' => ['lakeforest2/big/bath1.webp','lakeforest2/big/bath3.webp'],
+      'images' => ['lakeforest2/big/bath1.webp','lakeforest2/big/bath-before1.webp'],
     ],
     [
       'name' => 'Vernon Hills Bathroom Project',

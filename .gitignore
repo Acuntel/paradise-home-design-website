@@ -33,6 +33,7 @@ local/webp/
 local/legacy/
 local/final-round-*/
 local/homepage-photos-*/
+local/lf-bath-*/
 local/.final_round_ts
 
 # Server-generated PHP handler config, not ours to version.

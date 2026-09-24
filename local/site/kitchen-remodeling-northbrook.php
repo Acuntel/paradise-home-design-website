@@ -26,10 +26,12 @@ $faqs = [
   ['q' => 'Are you a design-build firm, or just a contractor?', 'a' => 'We are design-build, which means one accountable team handles your Northbrook kitchen from the floor plan and product selection through demolition and final installation. There is no handoff between a separate designer and builder, so decisions get made faster and nothing falls through the cracks.'],
   ['q' => 'How do I get started on a Northbrook kitchen remodel?', 'a' => 'Call (847) 681-9000 or request a consultation on our website. We respond within one business day, visit your Northbrook home to measure and talk through goals, and give you a written estimate before any work begins. Our showroom is about 20 minutes away in Lake Forest.'],
 ];
+// 2026-09-24: shared stock photos carry NO town label; only photos really from this town get one.
+$ts_projects_heading = 'Kitchens we\'ve designed.';
 $ts_projects = [
-  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White shaker kitchen, brass accents', 'location' => 'Northbrook, IL'],
-  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Blue island, subway tile', 'location' => 'Northbrook, IL'],
-  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => 'Northbrook, IL'],
+  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White kitchen, oversized island', 'location' => ''],
+  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Navy lower cabinets, subway tile', 'location' => ''],
+  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => ''],
 ];
 include "includes/components/ts_page.php";
 ?>

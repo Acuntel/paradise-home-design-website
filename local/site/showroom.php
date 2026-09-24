@@ -16,7 +16,7 @@ $address = $contact['Address'] ?? '225 E Deerpath Rd, Unit #80, Lake Forest, IL 
 <meta name="description" content="Visit the Paradise Home Design showroom at 225 E Deerpath Rd in Lake Forest, IL. Cabinet samples, stone samples, hardwood, and tile on display.">
 <link rel="canonical" href="https://www.paradisehomedesigninc.com/showroom.html" />
 <meta property="og:title" content="Paradise Home Design Showroom" />
-<meta property="og:image" content="https://www.paradisehomedesigninc.com<?php echo $baseurl; ?>showroom1/big/storefront1.webp" />
+<meta property="og:image" content="<?php echo $baseurl; ?>showroom1/big/storefront1.webp" />
 <meta name="robots" content="index, follow"/>
 <link rel="shortcut icon" href="<?php echo $baseurl; ?>assets/img/favicon.png">
 <?php include_once("includes/headtags.php"); ?>

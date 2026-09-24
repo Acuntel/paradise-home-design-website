@@ -20,7 +20,7 @@ $current_page = '';
 <link rel="canonical" href="https://www.paradisehomedesigninc.com/<?php echo $ts_slug; ?>.html" />
 <meta property="og:title" content="<?php echo htmlspecialchars($ts_title); ?>" />
 <meta property="og:description" content="<?php echo htmlspecialchars($ts_meta); ?>" />
-<meta property="og:image" content="https://www.paradisehomedesigninc.com<?php echo $ts_hero; ?>" />
+<meta property="og:image" content="<?php $pd_og = $ts_hero; echo preg_match('#^https?://#', $pd_og) ? $pd_og : 'https://www.paradisehomedesigninc.com/' . ltrim($pd_og, '/'); ?>" />
 <meta property="og:type" content="website" />
 <meta name="robots" content="index, follow"/>
 <link rel="shortcut icon" href="<?php echo $baseurl; ?>assets/img/favicon.png">
@@ -95,7 +95,7 @@ $current_page = '';
   <div class="container">
     <?php
       $sh_eyebrow = 'Recent work';
-      $sh_heading = $ts_town . ' projects.';
+      $sh_heading = $ts_projects_heading ?? ($ts_town . ' projects.');
       $sh_centered = true; $sh_description = '';
       include "includes/components/section_header.php";
     ?>

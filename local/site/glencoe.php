@@ -28,13 +28,16 @@ $faqs = [
   ['q' => 'Are you a design-build firm, or do I need a separate designer?', 'a' => 'We are a full design-build firm with an in-house design team, so one accountable group takes your Glencoe project from concept and product selection through permitting, construction, and final installation. You do not need to hire a separate designer or general contractor.'],
   ['q' => 'How do I get started on a Glencoe remodel?', 'a' => 'Call (847) 681-9000 or request a consultation on our website. Glencoe is about 20 minutes from our Lake Forest showroom, so we can schedule a site visit easily. We respond within one business day and provide a written estimate before any work begins.'],
 ];
+// 2026-09-24: shared stock photos carry NO town label; only photos really from this town get one.
+$cp_projects_eyebrow = 'Recent work';
+$cp_projects_heading = 'Kitchens we\'ve designed.';
 $cp_projects = [
-  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White shaker kitchen, brass accents', 'location' => 'Glencoe, IL'],
-  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Blue island, subway tile', 'location' => 'Glencoe, IL'],
-  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => 'Glencoe, IL'],
-  ['img' => BASEURL.'flash/big/2.webp', 'title' => 'Black cabinets, marble, brass', 'location' => 'Glencoe, IL'],
-  ['img' => BASEURL.'indexpage/big/1_1.webp', 'title' => 'Modern white kitchen + island', 'location' => 'Glencoe, IL'],
-  ['img' => BASEURL.'flash/big/3.webp', 'title' => 'Built-in gray cabinetry', 'location' => 'Glencoe, IL'],
+  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White kitchen, oversized island', 'location' => ''],
+  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Navy lower cabinets, subway tile', 'location' => ''],
+  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => ''],
+  ['img' => BASEURL.'flash/big/2.webp', 'title' => 'Black cabinets, marble, brass', 'location' => ''],
+  ['img' => BASEURL.'indexpage/big/1_1.webp', 'title' => 'White galley kitchen, hardwood', 'location' => ''],
+  ['img' => BASEURL.'flash/big/3.webp', 'title' => 'White kitchen, powder-blue island', 'location' => ''],
 ];
 include "includes/components/city_page.php";
 ?>

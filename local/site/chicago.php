@@ -13,7 +13,7 @@ $cp_projects = [
   ['img' => BASEURL.'chicago/big/6.webp', 'title' => 'Loft kitchen, exposed beams',   'location' => 'Chicago, IL'],
   ['img' => BASEURL.'chicago/big/8.webp', 'title' => 'Marble close-up, brass faucet', 'location' => 'Chicago, IL'],
   ['img' => BASEURL.'chicago/big/9.webp', 'title' => 'Open white kitchen, hardwood',  'location' => 'Chicago, IL'],
-  ['img' => BASEURL.'lakeforest/big/7_1.webp', 'title' => 'City bathroom suite',      'location' => 'Chicago, IL'],
+  ['img' => BASEURL.'chicago1/big/4.webp', 'title' => 'Brass pulls, quartz counters',  'location' => 'Chicago, IL'],
   ['img' => BASEURL.'chicago/big/2.webp', 'title' => 'Loft remodel + quartz',         'location' => 'Chicago, IL'],
 ];
 $cp_reasons = [

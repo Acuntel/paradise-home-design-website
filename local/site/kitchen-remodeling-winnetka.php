@@ -26,10 +26,11 @@ $faqs = [
   ['q' => 'Do you handle both the design and the construction?', 'a' => 'Yes. We are a design-build firm with an in-house design team, so one accountable team takes you from concept, cabinetry, and countertop selection through demolition, structural work, and final installation. You do not need to hire a separate kitchen designer or general contractor for your Winnetka remodel.'],
   ['q' => 'How do I get started on a Winnetka kitchen remodel?', 'a' => 'Call (847) 681-9000 or request a consultation through our website. We respond within one business day, talk through your goals and budget, and provide a written estimate before any work begins. Our Lake Forest showroom is about 20 minutes away if you would like to see cabinetry and countertop samples in person.'],
 ];
+// 2026-09-24: shared stock photos carry NO town label; only photos really from this town get one.
 $ts_projects = [
-  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White shaker kitchen, brass accents', 'location' => 'Winnetka, IL'],
-  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Blue island, subway tile', 'location' => 'Winnetka, IL'],
-  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'winnetka/big/6.webp', 'title' => 'Open white island kitchen', 'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'winnetka/big/8.webp', 'title' => 'White kitchen, gray island', 'location' => 'Winnetka, IL'],
+  ['img' => BASEURL.'winnetka/big/12.webp', 'title' => 'Marble island, polished nickel faucet', 'location' => 'Winnetka, IL'],
 ];
 include "includes/components/ts_page.php";
 ?>

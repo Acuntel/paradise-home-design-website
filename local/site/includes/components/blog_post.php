@@ -20,7 +20,7 @@ $current_page = '';
 <meta property="og:type" content="article" />
 <meta property="og:title" content="<?php echo htmlspecialchars($post_title); ?>" />
 <meta property="og:description" content="<?php echo htmlspecialchars($post_meta); ?>" />
-<meta property="og:image" content="https://www.paradisehomedesigninc.com<?php echo $post_hero; ?>" />
+<meta property="og:image" content="<?php $pd_og = $post_hero; echo preg_match('#^https?://#', $pd_og) ? $pd_og : 'https://www.paradisehomedesigninc.com/' . ltrim($pd_og, '/'); ?>" />
 <meta name="robots" content="index, follow"/>
 <link rel="shortcut icon" href="<?php echo $baseurl; ?>assets/img/favicon.png">
 <link rel="preload" as="image" href="<?php echo $post_hero; ?>">

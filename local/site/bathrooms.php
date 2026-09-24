@@ -24,12 +24,13 @@ $sp_materials = [
   ['name' => 'Lighting',           'desc' => 'Wet-rated, dimmable controls, adjustable color temperature.'],
 ];
 // All three photos are the client's finals (Mount Prospect received 2026-09-02).
+// 2026-09-24 (Irene): Lake Forest's 2nd photo was the Mount Prospect vanity; replaced with the client's Lake Forest before photo.
 // Tiles open the project's photos in an in-page modal (client: don't jump to the portfolio page).
 $sp_projects = [
   ['img' => BASEURL.'lakeforest2/big/bath1.webp',      'title' => 'Lake Forest Project',   'location' => '',
-   'tag' => 'Bathroom Remodel', 'meta' => 'Lake Forest, IL',
-   'paras' => ['Two refreshed baths with custom vanities, double sinks, and a tiled walk-in shower.'],
-   'images' => ['lakeforest2/big/bath1.webp','lakeforest2/big/bath3.webp']],
+   'tag' => 'Bathroom Remodel', 'meta' => 'Lake Forest, IL · Before & after',
+   'paras' => ['A dated tub bathroom with teal tile, transformed into a bright, modern space with a tiled walk-in shower, a custom double-sink vanity, and new large-format floor tile. The last photo shows the space before the remodel.'],
+   'images' => ['lakeforest2/big/bath1.webp','lakeforest2/big/bath-before1.webp']],
   ['img' => BASEURL.'vernonhills1/big/bath-main.webp', 'title' => 'Vernon Hills Project',   'location' => '',
    'tag' => 'Bathroom Remodel', 'meta' => 'Vernon Hills, IL · Before & after',
    'paras' => ['A dated tub bathroom transformed into a warm, modern retreat: marble-look porcelain, brushed gold fixtures, a walk-in shower with a black hexagon mosaic floor, and warm wood vanities. The last two photos show the space before the remodel.'],

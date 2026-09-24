@@ -30,7 +30,7 @@ $phone_href = 'tel:+1' . preg_replace('/\D/', '', $phone_raw);
 <link rel="canonical" href="https://www.paradisehomedesigninc.com/<?php echo $cp_canonical; ?>.html" />
 <meta property="og:title" content="<?php echo htmlspecialchars($cp_title); ?>" />
 <meta property="og:description" content="<?php echo htmlspecialchars($cp_meta_desc); ?>" />
-<meta property="og:image" content="https://www.paradisehomedesigninc.com<?php echo $cp_hero_image; ?>" />
+<meta property="og:image" content="<?php $pd_og = $cp_hero_image; echo preg_match('#^https?://#', $pd_og) ? $pd_og : 'https://www.paradisehomedesigninc.com/' . ltrim($pd_og, '/'); ?>" />
 <meta property="og:type" content="website" />
 <link rel="shortcut icon" href="<?php echo $baseurl; ?>assets/img/favicon.png">
 <link rel="preload" as="image" href="<?php echo $cp_hero_image; ?>">
@@ -97,9 +97,9 @@ $phone_href = 'tel:+1' . preg_replace('/\D/', '', $phone_raw);
 <section>
   <div class="container">
     <?php
-      $sh_eyebrow = $cp_city_name . ' projects';
-      $sh_heading = 'Kitchens we\'ve designed in ' . $cp_city_name . '.';
-      $sh_description = 'Real homes, real clients. Click any project to see more in the gallery.';
+      $sh_eyebrow = $cp_projects_eyebrow ?? ($cp_city_name . ' projects');
+      $sh_heading = $cp_projects_heading ?? ('Kitchens we\'ve designed in ' . $cp_city_name . '.');
+      $sh_description = 'Real homes, real clients. Click any project to see more in the portfolio.';
       $sh_centered = true;
       include "includes/components/section_header.php";
     ?>

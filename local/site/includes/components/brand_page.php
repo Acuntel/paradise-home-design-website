@@ -31,7 +31,7 @@ $baseurl = defined('BASEURL') ? BASEURL : '/';
 <link rel="canonical" href="https://www.paradisehomedesigninc.com/<?php echo $bp_canonical; ?>.html" />
 <meta property="og:title" content="<?php echo htmlspecialchars($bp_title); ?>" />
 <meta property="og:description" content="<?php echo htmlspecialchars($bp_meta_desc); ?>" />
-<meta property="og:image" content="https://www.paradisehomedesigninc.com<?php echo $bp_hero_image; ?>" />
+<meta property="og:image" content="<?php $pd_og = $bp_hero_image; echo preg_match('#^https?://#', $pd_og) ? $pd_og : 'https://www.paradisehomedesigninc.com/' . ltrim($pd_og, '/'); ?>" />
 <meta property="og:url" content="https://www.paradisehomedesigninc.com/<?php echo $bp_canonical; ?>.html" />
 <meta property="og:type" content="website" />
 <meta name="robots" content="index, follow"/>

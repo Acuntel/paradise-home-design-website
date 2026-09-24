@@ -15,7 +15,7 @@ $phone_raw = $contact['Phone'] ?? '(847) 681-9000';
 <meta name="description" content="Paradise Home Design Inc. is a full-service, one-stop design and build firm in Lake Forest, IL. Over 37 years of kitchen design, custom cabinetry, bathrooms, remodeling, additions, countertops, and flooring.">
 <link rel="canonical" href="https://www.paradisehomedesigninc.com/about.html" />
 <meta property="og:title" content="About Paradise Home Design" />
-<meta property="og:image" content="https://www.paradisehomedesigninc.com<?php echo $baseurl; ?>flash/big/5.webp" />
+<meta property="og:image" content="<?php echo $baseurl; ?>flash/big/5.webp" />
 <meta name="robots" content="index, follow"/>
 <link rel="shortcut icon" href="<?php echo $baseurl; ?>assets/img/favicon.png">
 <?php include_once("includes/headtags.php"); ?>

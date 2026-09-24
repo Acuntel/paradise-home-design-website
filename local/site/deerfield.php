@@ -28,13 +28,16 @@ $faqs = [
   ['q' => 'Do you handle both the design and the construction?', 'a' => 'Yes. We are a design-build firm with an in-house design team, so one accountable team takes you from concept and product selection through construction and final installation. You do not need to hire a separate designer or general contractor.'],
   ['q' => 'How do I get started on a Deerfield remodel?', 'a' => 'Call (847) 681-9000 or request a consultation on our website. We respond within one business day, talk through your goals and budget, and provide a written estimate before any work begins. Our showroom is about 15 minutes away in Lake Forest.'],
 ];
+// 2026-09-24: shared stock photos carry NO town label; only photos really from this town get one.
+$cp_projects_eyebrow = 'Recent work';
+$cp_projects_heading = 'Kitchens we\'ve designed.';
 $cp_projects = [
-  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White shaker kitchen, brass accents', 'location' => 'Deerfield, IL'],
-  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Blue island, subway tile', 'location' => 'Deerfield, IL'],
-  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => 'Deerfield, IL'],
-  ['img' => BASEURL.'flash/big/2.webp', 'title' => 'Black cabinets, marble, brass', 'location' => 'Deerfield, IL'],
-  ['img' => BASEURL.'indexpage/big/1_1.webp', 'title' => 'Modern white kitchen + island', 'location' => 'Deerfield, IL'],
-  ['img' => BASEURL.'flash/big/3.webp', 'title' => 'Built-in gray cabinetry', 'location' => 'Deerfield, IL'],
+  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White kitchen, oversized island', 'location' => ''],
+  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Navy lower cabinets, subway tile', 'location' => ''],
+  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => ''],
+  ['img' => BASEURL.'flash/big/2.webp', 'title' => 'Black cabinets, marble, brass', 'location' => ''],
+  ['img' => BASEURL.'indexpage/big/1_1.webp', 'title' => 'White galley kitchen, hardwood', 'location' => ''],
+  ['img' => BASEURL.'flash/big/3.webp', 'title' => 'White kitchen, powder-blue island', 'location' => ''],
 ];
 include "includes/components/city_page.php";
 ?>

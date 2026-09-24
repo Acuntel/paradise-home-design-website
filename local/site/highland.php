@@ -11,10 +11,10 @@ $cp_neighborhoods = ['Ravinia', 'Highwood', 'Briergate', 'Sherwood Forest'];
 $cp_projects = [
   ['img' => BASEURL.'highland2/big/1_1.webp', 'title' => 'Cherry traditional + granite',  'location' => 'Highland Park, IL'],
   ['img' => BASEURL.'highland3/big/1_1.webp', 'title' => 'Two-tone white + gray island',  'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'highland3/big/5_1.webp', 'title' => 'Modern white kitchen',          'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'highland3/big/7_1.webp', 'title' => 'Granite vessel-sink bath',      'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'highland4/big/4.webp',  'title' => 'White kitchen, quartzite island', 'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'highland4/big/6.webp',  'title' => 'Quartzite backsplash, pro range', 'location' => 'Highland Park, IL'],
   ['img' => BASEURL.'highland3/big/10_1.webp','title' => 'White inset kitchen',           'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'highland/big/1_1.webp',  'title' => 'Dark navy built-in cabinetry',  'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'highland/big/1_1.webp',  'title' => 'Custom built-ins, arched glass doors',  'location' => 'Highland Park, IL'],
 ];
 $cp_reasons = [
   ['title' => 'We know the housing stock.', 'body' => 'Over 37 years working Highland Park homes — we know the Ravinia vintage homes and post-1970 ranches and split-levels, and the load-bearing tells. No surprises mid-project.'],

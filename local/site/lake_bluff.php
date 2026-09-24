@@ -28,13 +28,16 @@ $faqs = [
   ['q' => 'Are you a true design-build firm, or just installers?', 'a' => 'We are a full design-build firm with an in-house design team. One accountable team takes your Lake Bluff project from concept, cabinetry, and countertop selection through permitting, construction, and final installation — you do not need to hire a separate designer or general contractor.'],
   ['q' => 'How do I get started on a Lake Bluff remodel?', 'a' => 'Call (847) 681-9000 or request a consultation on our website. We are about five minutes away in Lake Forest, respond within one business day, talk through your goals and budget, and provide a written estimate before any work begins.'],
 ];
+// 2026-09-24: shared stock photos carry NO town label; only photos really from this town get one.
+$cp_projects_eyebrow = 'Recent work';
+$cp_projects_heading = 'Kitchens we\'ve designed.';
 $cp_projects = [
-  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White shaker kitchen, brass accents', 'location' => 'Lake Bluff, IL'],
-  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Blue island, subway tile', 'location' => 'Lake Bluff, IL'],
-  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => 'Lake Bluff, IL'],
-  ['img' => BASEURL.'flash/big/2.webp', 'title' => 'Black cabinets, marble, brass', 'location' => 'Lake Bluff, IL'],
-  ['img' => BASEURL.'indexpage/big/1_1.webp', 'title' => 'Modern white kitchen + island', 'location' => 'Lake Bluff, IL'],
-  ['img' => BASEURL.'flash/big/3.webp', 'title' => 'Built-in gray cabinetry', 'location' => 'Lake Bluff, IL'],
+  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White kitchen, oversized island', 'location' => ''],
+  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Navy lower cabinets, subway tile', 'location' => ''],
+  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => ''],
+  ['img' => BASEURL.'flash/big/2.webp', 'title' => 'Black cabinets, marble, brass', 'location' => ''],
+  ['img' => BASEURL.'indexpage/big/1_1.webp', 'title' => 'White galley kitchen, hardwood', 'location' => ''],
+  ['img' => BASEURL.'flash/big/3.webp', 'title' => 'White kitchen, powder-blue island', 'location' => ''],
 ];
 include "includes/components/city_page.php";
 ?>

@@ -26,10 +26,11 @@ $faqs = [
   ['q' => 'Do you handle both the design and the construction?', 'a' => 'Yes. We are a design-build firm with an in-house design team, so one accountable team takes your Highland Park kitchen from layout and cabinet selection through demolition, construction, and final installation. You don\'t need to hire a separate designer.'],
   ['q' => 'How do I get started on a Highland Park kitchen remodel?', 'a' => 'Call (847) 681-9000 or request a consultation on our website. We are based just north in Lake Forest, we respond within one business day, and we provide a written estimate before any work begins.'],
 ];
+// 2026-09-24: shared stock photos carry NO town label; only photos really from this town get one.
 $ts_projects = [
-  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White shaker kitchen, brass accents', 'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Blue island, subway tile', 'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'highland4/big/4.webp', 'title' => 'White kitchen, quartzite island', 'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'highland4/big/6.webp', 'title' => 'Quartzite backsplash, pro range', 'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'highland4/big/1.webp', 'title' => 'Long quartzite island', 'location' => 'Highland Park, IL'],
 ];
 include "includes/components/ts_page.php";
 ?>

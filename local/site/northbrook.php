@@ -28,13 +28,16 @@ $faqs = [
   ['q' => 'Are you a design-build remodeler, or just a contractor?', 'a' => 'We\'re a full design-build firm. Our in-house design team plans your Northbrook layout, walks you through cabinetry and countertop selections, and then our own crews build it — one accountable team from concept through final installation. You don\'t need to hire a separate designer or architect for most kitchen and bath projects.'],
   ['q' => 'How do I get started on a Northbrook remodel?', 'a' => 'Call (847) 681-9000 or request a consultation through our website. We respond within one business day, visit your Northbrook home to discuss goals and budget, and provide a written estimate before any work begins. Our showroom is about 20 minutes away in Lake Forest if you\'d like to see cabinetry and countertops in person.'],
 ];
+// 2026-09-24: shared stock photos carry NO town label; only photos really from this town get one.
+$cp_projects_eyebrow = 'Recent work';
+$cp_projects_heading = 'Kitchens we\'ve designed.';
 $cp_projects = [
-  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White shaker kitchen, brass accents', 'location' => 'Northbrook, IL'],
-  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Blue island, subway tile', 'location' => 'Northbrook, IL'],
-  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => 'Northbrook, IL'],
-  ['img' => BASEURL.'flash/big/2.webp', 'title' => 'Black cabinets, marble, brass', 'location' => 'Northbrook, IL'],
-  ['img' => BASEURL.'indexpage/big/1_1.webp', 'title' => 'Modern white kitchen + island', 'location' => 'Northbrook, IL'],
-  ['img' => BASEURL.'flash/big/3.webp', 'title' => 'Built-in gray cabinetry', 'location' => 'Northbrook, IL'],
+  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White kitchen, oversized island', 'location' => ''],
+  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Navy lower cabinets, subway tile', 'location' => ''],
+  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => ''],
+  ['img' => BASEURL.'flash/big/2.webp', 'title' => 'Black cabinets, marble, brass', 'location' => ''],
+  ['img' => BASEURL.'indexpage/big/1_1.webp', 'title' => 'White galley kitchen, hardwood', 'location' => ''],
+  ['img' => BASEURL.'flash/big/3.webp', 'title' => 'White kitchen, powder-blue island', 'location' => ''],
 ];
 include "includes/components/city_page.php";
 ?>

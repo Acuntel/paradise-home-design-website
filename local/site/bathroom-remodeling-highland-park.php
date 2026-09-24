@@ -26,10 +26,12 @@ $faqs = [
   ['q' => 'Do you handle both design and construction?', 'a' => 'Yes — we are a design-build firm. One Paradise Home Design team handles your layout, tile, stone, plumbing, lighting, and build from the first sketch through final inspection, so nothing falls through the cracks between a separate designer and contractor.'],
   ['q' => 'How do I get started on a Highland Park bathroom remodel?', 'a' => 'Call (847) 681-9000 or request a consultation on our website. We respond within one business day, visit your Highland Park home, and provide a written estimate before any work begins. Our showroom is about 15 minutes north in Lake Forest.'],
 ];
+// 2026-09-24: shared stock photos carry NO town label; only photos really from this town get one.
+$ts_projects_heading = 'Bathrooms we\'ve designed.';
 $ts_projects = [
-  ['img' => BASEURL.'flash/big/4.webp', 'title' => 'Spa bath, floating vanity', 'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'lakeforest/big/3_1.webp', 'title' => 'Double-vanity primary bath', 'location' => 'Highland Park, IL'],
-  ['img' => BASEURL.'lakeforest/big/7_1.webp', 'title' => 'Powder room, vessel sinks', 'location' => 'Highland Park, IL'],
+  ['img' => BASEURL.'flash/big/4.webp', 'title' => 'Spa bath, floating vanity', 'location' => ''],
+  ['img' => BASEURL.'lakeforest2/big/bath1.webp', 'title' => 'Double vanity, walk-in shower', 'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'vernonhills1/big/bath-main.webp', 'title' => 'Warm wood double vanity, brass fixtures', 'location' => 'Vernon Hills, IL'],
 ];
 include "includes/components/ts_page.php";
 ?>

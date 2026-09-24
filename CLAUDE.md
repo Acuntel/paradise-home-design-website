@@ -102,6 +102,12 @@ line added or its `.html` URL 404s. Sitemap is `sitemap.xml`.
 - **Leads:** GoDaddy blocks outbound SMTP (all ports) AND PHP `mail()` is dropped by Gmail
   (no SPF/DKIM). Every lead is captured in `leads/leads.csv` + `/leads.php` dashboard
   (always reliable). Email notify rides FormSubmit.co (HTTP, flaky). No real email key yet.
+- **Project photo labels (2026-09-24):** a tile gets a town label (`'location'`) ONLY if the photo really
+  came from that town's job. Shared stock photos (`flash/big/*`, `indexpage/big/*`) NEVER get a town
+  label, and pages using them override the section heading (`$cp_projects_heading/_eyebrow`,
+  `$ts_projects_heading`) to a generic one. The client catches reused photos, so never put one photo under
+  two different projects. Folders like `highland3/` are mixed grab-bags, so LOOK at a photo before labeling it.
+- `og:image` in the templates must not prefix the host: hero vars are already absolute `BASEURL` URLs.
 - Client (Shiva + Brady) is reviewing the site **section by section**; expect incremental copy
   edits. Pending photos arrive by email (Irene/Shiva) — don't invent project photos or stats.
 

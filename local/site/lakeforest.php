@@ -9,12 +9,12 @@ $cp_hero_image = BASEURL . 'flash/big/5.webp';
 $cp_zip_codes = ['60045'];
 $cp_neighborhoods = ['East Lake Forest', 'West Lake Forest', 'Knollwood', 'Conway Farms', 'Everett'];
 $cp_projects = [
-  ['img' => BASEURL.'lakeforest/big/1_1.webp', 'title' => 'Navy island + open staircase', 'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'lakeforest/big/2_1.webp', 'title' => 'White shaker + brass pulls',    'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest/big/1_1.webp', 'title' => 'White shaker, open shelving', 'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest/big/2_1.webp', 'title' => 'White shaker, matte black pulls', 'location' => 'Lake Forest, IL'],
   ['img' => BASEURL.'lakeforest/big/3_1.webp', 'title' => 'Double-vanity primary bath',    'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'lakeforest/big/5_1.webp', 'title' => 'Marble sink + brass faucet',    'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'lakeforest/big/7_1.webp', 'title' => 'Spa bath, vessel sinks',        'location' => 'Lake Forest, IL'],
-  ['img' => BASEURL.'lakeforest/big/8_1.webp', 'title' => 'Open white kitchen + island',   'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest/big/5_1.webp', 'title' => 'Gray vanity, vessel sink', 'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest2/big/kitchen3.webp', 'title' => 'Quartzite backsplash, workstation sink',  'location' => 'Lake Forest, IL'],
+  ['img' => BASEURL.'lakeforest/big/8_1.webp', 'title' => 'Open white kitchen, wood floors', 'location' => 'Lake Forest, IL'],
 ];
 $cp_reasons = [
   ['title' => 'We know the housing stock.', 'body' => 'Over 37 years working Lake Forest homes — we know the historic-district details, teardown/rebuilds, and Conway Farms layouts, and the load-bearing tells. No surprises mid-project.'],
@@ -28,5 +28,6 @@ $faqs = [
   ['q' => 'Do you handle both design and construction?', 'a' => 'Yes. We are a design-build firm with an in-house design team, so one accountable team takes you from concept and product selection through construction and final installation.'],
   ['q' => 'How do I get started on a Lake Forest remodel?', 'a' => 'Call (847) 681-9000 or request a consultation on our website. We respond within one business day and provide a written estimate before any work begins.'],
 ];
+$cp_projects_heading = 'Kitchens and baths we\'ve designed in Lake Forest.';
 include "includes/components/city_page.php";
 ?>

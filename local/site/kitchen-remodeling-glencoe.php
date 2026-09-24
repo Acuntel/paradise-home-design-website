@@ -26,10 +26,12 @@ $faqs = [
   ['q' => 'Are you a design-build firm, or just a contractor?', 'a' => 'We are a true design-build firm with an in-house design team. One accountable team takes you from concept and product selection through construction and final installation, so you don\'t need to hire a separate designer or general contractor for your Glencoe kitchen.'],
   ['q' => 'How do I get started on a kitchen remodel in Glencoe?', 'a' => 'Call (847) 681-9000 or request a consultation on our website. We talk through your goals and budget, visit the home, and provide a written estimate before any work begins. Our showroom is about 20 minutes away in Lake Forest.'],
 ];
+// 2026-09-24: shared stock photos carry NO town label; only photos really from this town get one.
+$ts_projects_heading = 'Kitchens we\'ve designed.';
 $ts_projects = [
-  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White shaker kitchen, brass accents', 'location' => 'Glencoe, IL'],
-  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Blue island, subway tile', 'location' => 'Glencoe, IL'],
-  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => 'Glencoe, IL'],
+  ['img' => BASEURL.'flash/big/5.webp', 'title' => 'White kitchen, oversized island', 'location' => ''],
+  ['img' => BASEURL.'flash/big/1.webp', 'title' => 'Navy lower cabinets, subway tile', 'location' => ''],
+  ['img' => BASEURL.'flash/big/7.webp', 'title' => 'Traditional cherry kitchen', 'location' => ''],
 ];
 include "includes/components/ts_page.php";
 ?>
